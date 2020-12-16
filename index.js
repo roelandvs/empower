@@ -1,6 +1,8 @@
 import { datasetOne } from './datasets/energie-gebruik.js';
 import { datasetTwo } from './datasets/buurtnaam.js';
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
+
+// console.log(process.env.API_KEY);
 
 let buurtCapaciteit = datasetOne;
 let buurtInfo = datasetTwo;
