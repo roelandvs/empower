@@ -2,8 +2,6 @@ import { datasetOne } from './datasets/energie-gebruik.js';
 import { datasetTwo } from './datasets/buurtnaam.js';
 import dotenv from 'dotenv';
 
-// console.log(process.env.API_KEY);
-
 let buurtCapaciteit = datasetOne;
 let buurtInfo = datasetTwo;
 
@@ -14,7 +12,6 @@ mergeDatasets(buurtCapaciteit, buurtInfo);
 function mergeDatasets(dataset1, dataset2) {
 	let capaciteitDataset = dataset1;
 	let infoDataset = dataset2;
-
 	// console.log(dataset1.length);
 
 	//dit moet netter gechaint worden
