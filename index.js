@@ -1,33 +1,36 @@
 import { datasetOne } from './datasets/energie-gebruik.js';
 import { datasetTwo } from './datasets/buurtnaam.js';
-import dotenv from 'dotenv';
+import { datasetThree } from './datasets/hernieuwbare_energie.js';
+import { APIData } from './datasets/api-data.js';
 
 let buurtCapaciteit = datasetOne;
 let buurtInfo = datasetTwo;
+let geoData = APIData;
+let energieData = datasetThree;
 
-mergeDatasets(buurtCapaciteit, buurtInfo);
-	// .then(filterEntries)
-	// .then(mergeGemeentes)
+Promise.resolve(buurtCapaciteit)
+	.then(response => mergeDatasets(response, buurtInfo))
+	.then(filterEntries)
+	.then(mergeGemeentes)
+	.then(mergeAPIData)
+	.then(mergeEnergieData)
+	// .then(mergeProvincies)
+	.then(console.log)
 
 function mergeDatasets(dataset1, dataset2) {
 	let capaciteitDataset = dataset1;
 	let infoDataset = dataset2;
-	// console.log(dataset1.length);
 
-	//dit moet netter gechaint worden
-	mergeGemeentes(
-		filterEntries(
-			capaciteitDataset.map(entry => {
-				let buurtCodeMatch = infoDataset.find(item => item.gwb_code === entry.BU_CODE);
+	return capaciteitDataset.map(entry => {
+		let buurtCodeMatch = infoDataset.find(item => item.gwb_code === entry.BU_CODE);
 
-					if (buurtCodeMatch) {
-						const mergedItem = {...entry, ...buurtCodeMatch};
-						return mergedItem;
-					}
+		if (buurtCodeMatch) {
+			let mergedItem = {...entry, ...buurtCodeMatch};
+			return mergedItem;
+		}
 
-			}).filter(entry => entry !== undefined)
-		)
-	);
+	}).filter(entry => entry !== undefined)
+
 };
 
 function filterEntries(dataset) {
@@ -61,38 +64,118 @@ function filterEntries(dataset) {
 };
 
 function mergeGemeentes(dataset) {
-	// console.log('buurten', dataset)
-	console.log('gemeentes', 
+	return dataset.reduce((acc, cur) => {
+	    const findMatchIndex = acc.findIndex(item => item.gemeente === cur.gemeente);
 
-		dataset.reduce((acc, cur) => {
-			let gemeente = cur.gemeente;
-		    let inwoners = cur.inwoners;
-		    let capaciteitKVA = cur.capaciteitKVA;
-		    let gasaansluitingen = cur.gasaansluitingen;
-		    // console.log(gasaansluitingen);
+	    if(findMatchIndex !== -1) {
+	    	acc[findMatchIndex].inwoners += cur.inwoners;
+  			acc[findMatchIndex].capaciteitKVA += cur.capaciteitKVA;
+  			acc[findMatchIndex].gasaansluitingen += cur.gasaansluitingen;
+	  	} else {
+	  		let newGemeente = {
+	  			regio: cur.regio,
+		        gemeente: cur.gemeente,
+		        inwoners: cur.inwoners,
+		        capaciteitKVA: cur.capaciteitKVA,
+		        gasaansluitingen: cur.gasaansluitingen
+	    	}
 
-		    const findMatchIndex = acc.findIndex(item => item.gemeente === gemeente);
+	    	acc.push(newGemeente);
+	  	}
 
-		    if(findMatchIndex != -1) {
-		    	acc[findMatchIndex].inwoners += inwoners;
-      			acc[findMatchIndex].capaciteitKVA += capaciteitKVA;
-      			acc[findMatchIndex].gasaansluitingen += gasaansluitingen;
-		  	} else {
-		  		let newGemeente = {
-			        gemeente: gemeente,
-			        inwoners: inwoners,
-			        capaciteitKVA: capaciteitKVA,
-			        gasaansluitingen: gasaansluitingen
-		    	}
+	  	return acc;
+	}, []);
+};
 
-		    	acc.push(newGemeente);
-		  	}
+function mergeAPIData(dataset) {
+	return dataset.map(entry => {
+		let gemeenteMatch = geoData.find(item => item.gemeenteNaam === entry.gemeente);
 
-		  	return acc;
-		}, [])
+		if(gemeenteMatch) {
+			let newObject = {
+				gemeente: entry.gemeente,
+		        inwoners: entry.inwoners,
+		        capaciteitKVA: entry.capaciteitKVA,
+		        gasaansluitingen: entry.gasaansluitingen,
+		        provincie: gemeenteMatch.gemeenteInfo.components.state,
+		        mercator: gemeenteMatch.gemeenteInfo.annotations.Mercator,
+		        lngLat: gemeenteMatch.gemeenteInfo.geometry,
+			};
 
-    );
+			return newObject;
+		};
+	})
+	.filter(entry => entry.provincie !== "Friesland")
+	.filter(entry => entry.provincie !== "Gelderland")
+	.filter(entry => entry.provincie !== "Utrecht")
+	.filter(entry => entry.provincie !== "Noord-Holland")
+	.filter(entry => entry.provincie !== "Zuid-Holland")
+	.filter(entry => entry.provincie !== "Groningen")
+	.filter(entry => entry.provincie !== "Drenthe")
+	.filter(entry => entry.provincie !== "Overijssel")
+	.filter(entry => entry.provincie !== "Flevoland")
+	.filter(entry => entry.provincie !== "Noord-Brabant")
+	.filter(entry => entry.provincie !== "Limburg")
+	.filter(entry => entry.provincie !== "Zeeland")
+};
+
+function mergeEnergieData(dataset) {
+	return dataset.map(entry => {
+		let gemeenteMatch = energieData.find(item => item.Gemeente === entry.gemeente);
+
+		// console.log(gemeenteMatch);
+
+		if(gemeenteMatch) {
+			let newObject = {
+				gemeente: entry.gemeente,
+		        inwoners: entry.inwoners,
+		        capaciteitKVA: entry.capaciteitKVA,
+		        gasaansluitingen: entry.gasaansluitingen,
+		        provincie: entry.provincie,
+		        mercator: entry.mercator,
+		        lngLat: entry.lngLat,
+		        percentageGroeneEnergie: {
+		        	"2010": gemeenteMatch[2010], 
+		        	"2011": gemeenteMatch[2011],
+		        	"2012": gemeenteMatch[2012],
+		        	"2013": gemeenteMatch[2013],
+		        	"2014": gemeenteMatch[2014],
+		        	"2015": gemeenteMatch[2015],
+		        	"2016": gemeenteMatch[2016],
+		        	"2017": gemeenteMatch[2017],
+		        	"2018": gemeenteMatch[2018],
+		        }
+			};
+
+			return newObject;
+		}
+	})
 };
 
 
+function mergeProvincies(dataset) {
+	// console.log('dataset:', dataset);
+	return dataset.reduce((acc, cur) => {
+	    const findMatchIndex = acc.findIndex(item => item.provincie === cur.provincie);
+
+	    if(findMatchIndex !== -1) {
+	    	acc[findMatchIndex].inwoners += cur.inwoners;
+  			acc[findMatchIndex].capaciteitKVA += cur.capaciteitKVA;
+  			acc[findMatchIndex].gasaansluitingen += cur.gasaansluitingen;
+	  	} else {
+	  		let newProvincie = {
+		        provincie: cur.provincie,
+		        inwoners: cur.inwoners,
+		        capaciteitKVA: cur.capaciteitKVA,
+		        gasaansluitingen: cur.gasaansluitingen,
+		        mercator: cur.mercator,
+		        lngLat: cur.lngLat,
+	    	}
+
+	    	acc.push(newProvincie);
+	  	}
+
+	  	return acc;
+	}, []);
+}
 
