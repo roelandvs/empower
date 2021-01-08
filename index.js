@@ -1,5 +1,6 @@
 import { datasetOne } from './datasets/energie-gebruik.js';
 import { datasetTwo } from './datasets/buurtnaam.js';
+// import { datasetTwo } from './datasets/buurtnaam2.js';
 import { datasetThree } from './datasets/hernieuwbare_energie.js';
 import { APIData } from './datasets/api-data.js';
 
@@ -10,12 +11,21 @@ let energieData = datasetThree;
 
 Promise.resolve(buurtCapaciteit)
 	.then(response => mergeDatasets(response, buurtInfo))
+	.then(response => mergeGMCode(response, buurtInfo))
 	.then(filterEntries)
 	.then(mergeGemeentes)
 	.then(mergeAPIData)
 	.then(mergeEnergieData)
+	.then(makeNumber)
 	// .then(mergeProvincies)
+	// .then(console.log);
+
+Promise.resolve(energieData)
+	.then(response => mergeStart(response, buurtInfo))
+	.then(filterEnergieEntries)
+	.then(makeNumber)
 	.then(console.log)
+
 
 function mergeDatasets(dataset1, dataset2) {
 	let capaciteitDataset = dataset1;
@@ -30,7 +40,18 @@ function mergeDatasets(dataset1, dataset2) {
 		}
 
 	}).filter(entry => entry !== undefined)
+};
 
+function mergeGMCode(dataset1, dataset2) {
+	return dataset1.map(entry => {
+		let gemeenteNaamMatch = dataset2.find(item => item.gm_naam === entry.gm_naam);
+		// console.log(gemeenteNaamMatch);
+
+		if (gemeenteNaamMatch.gwb_code_10.startsWith('GM')) {
+			let mergedItem = {...entry, ...gemeenteNaamMatch};
+			return mergedItem;
+		}
+	}).filter(entry => entry !== undefined)
 };
 
 function filterEntries(dataset) {
@@ -52,6 +73,7 @@ function filterEntries(dataset) {
 
 		let cleanObject = {
 			buurtCode: entry.BU_CODE,
+			gemeenteCode: entry.gwb_code,
 			regio: entry.regio,
 			gemeente: entry.gm_naam,
 			inwoners: +entry.a_inw,
@@ -75,6 +97,7 @@ function mergeGemeentes(dataset) {
 	  		let newGemeente = {
 	  			regio: cur.regio,
 		        gemeente: cur.gemeente,
+		        gemeenteCode: cur.gemeenteCode,
 		        inwoners: cur.inwoners,
 		        capaciteitKVA: cur.capaciteitKVA,
 		        gasaansluitingen: cur.gasaansluitingen
@@ -94,6 +117,7 @@ function mergeAPIData(dataset) {
 		if(gemeenteMatch) {
 			let newObject = {
 				gemeente: entry.gemeente,
+				gemeenteCode: entry.gemeenteCode,
 		        inwoners: entry.inwoners,
 		        capaciteitKVA: entry.capaciteitKVA,
 		        gasaansluitingen: entry.gasaansluitingen,
@@ -105,18 +129,18 @@ function mergeAPIData(dataset) {
 			return newObject;
 		};
 	})
-	.filter(entry => entry.provincie !== "Friesland")
-	.filter(entry => entry.provincie !== "Gelderland")
-	.filter(entry => entry.provincie !== "Utrecht")
-	.filter(entry => entry.provincie !== "Noord-Holland")
-	.filter(entry => entry.provincie !== "Zuid-Holland")
-	.filter(entry => entry.provincie !== "Groningen")
-	.filter(entry => entry.provincie !== "Drenthe")
-	.filter(entry => entry.provincie !== "Overijssel")
-	.filter(entry => entry.provincie !== "Flevoland")
-	.filter(entry => entry.provincie !== "Noord-Brabant")
-	.filter(entry => entry.provincie !== "Limburg")
-	.filter(entry => entry.provincie !== "Zeeland")
+	// .filter(entry => entry.provincie !== "Friesland")
+	// .filter(entry => entry.provincie !== "Gelderland")
+	// .filter(entry => entry.provincie !== "Utrecht")
+	// .filter(entry => entry.provincie !== "Noord-Holland")
+	// .filter(entry => entry.provincie !== "Zuid-Holland")
+	// .filter(entry => entry.provincie !== "Groningen")
+	// .filter(entry => entry.provincie !== "Drenthe")
+	// .filter(entry => entry.provincie !== "Overijssel")
+	// .filter(entry => entry.provincie !== "Flevoland")
+	// .filter(entry => entry.provincie !== "Noord-Brabant")
+	// .filter(entry => entry.provincie !== "Limburg")
+	// .filter(entry => entry.provincie !== "Zeeland")
 };
 
 function mergeEnergieData(dataset) {
@@ -124,27 +148,31 @@ function mergeEnergieData(dataset) {
 		let gemeenteMatch = energieData.find(item => item.Gemeente === entry.gemeente);
 
 		// console.log(gemeenteMatch);
+		let groenPercentage;
 
 		if(gemeenteMatch) {
+			groenPercentage = gemeenteMatch[2018];
+
 			let newObject = {
 				gemeente: entry.gemeente,
-		        inwoners: entry.inwoners,
-		        capaciteitKVA: entry.capaciteitKVA,
-		        gasaansluitingen: entry.gasaansluitingen,
-		        provincie: entry.provincie,
-		        mercator: entry.mercator,
-		        lngLat: entry.lngLat,
-		        percentageGroeneEnergie: {
-		        	"2010": gemeenteMatch[2010], 
-		        	"2011": gemeenteMatch[2011],
-		        	"2012": gemeenteMatch[2012],
-		        	"2013": gemeenteMatch[2013],
-		        	"2014": gemeenteMatch[2014],
-		        	"2015": gemeenteMatch[2015],
-		        	"2016": gemeenteMatch[2016],
-		        	"2017": gemeenteMatch[2017],
-		        	"2018": gemeenteMatch[2018],
-		        }
+				gemeenteCode: entry.gemeenteCode,
+		        // inwoners: entry.inwoners,
+		        // capaciteitKVA: entry.capaciteitKVA,
+		        // gasaansluitingen: entry.gasaansluitingen,
+		        // provincie: entry.provincie,
+		        // mercator: entry.mercator,
+		        // lngLat: entry.lngLat,
+		        // percentageGroeneEnergie: {
+		        // 	"2010": gemeenteMatch[2010], 
+		        // 	"2011": gemeenteMatch[2011],
+		        // 	"2012": gemeenteMatch[2012],
+		        // 	"2013": gemeenteMatch[2013],
+		        // 	"2014": gemeenteMatch[2014],
+		        // 	"2015": gemeenteMatch[2015],
+		        // 	"2016": gemeenteMatch[2016],
+		        // 	"2017": gemeenteMatch[2017],
+		        	groenPercentage2018: gemeenteMatch[2018],
+		        // }
 			};
 
 			return newObject;
@@ -152,30 +180,40 @@ function mergeEnergieData(dataset) {
 	})
 };
 
+function makeNumber(dataset) {
+	return dataset.map(entry => {
+		let jaarWaarde = '0';
 
-function mergeProvincies(dataset) {
-	// console.log('dataset:', dataset);
-	return dataset.reduce((acc, cur) => {
-	    const findMatchIndex = acc.findIndex(item => item.provincie === cur.provincie);
+		if (entry.groenPercentage2018.includes(',')) {
+			jaarWaarde = entry.groenPercentage2018.replace(',', '.');
+		}
 
-	    if(findMatchIndex !== -1) {
-	    	acc[findMatchIndex].inwoners += cur.inwoners;
-  			acc[findMatchIndex].capaciteitKVA += cur.capaciteitKVA;
-  			acc[findMatchIndex].gasaansluitingen += cur.gasaansluitingen;
-	  	} else {
-	  		let newProvincie = {
-		        provincie: cur.provincie,
-		        inwoners: cur.inwoners,
-		        capaciteitKVA: cur.capaciteitKVA,
-		        gasaansluitingen: cur.gasaansluitingen,
-		        mercator: cur.mercator,
-		        lngLat: cur.lngLat,
-	    	}
+		entry.groenPercentage2018 = +jaarWaarde;
+		return entry;
+	})
+};
 
-	    	acc.push(newProvincie);
-	  	}
+function mergeStart(dataset1, dataset2) {
+	return dataset1.map(entry => {
+		let gemeenteNaamMatch = dataset2.find(item => item.gm_naam === entry.Gemeente);
 
-	  	return acc;
-	}, []);
-}
+		if (gemeenteNaamMatch.gwb_code.startsWith('GM')) {
+			let mergedItem = {...entry, ...gemeenteNaamMatch};
+			return mergedItem;
+		}
+	}).filter(entry => entry !== undefined)
+};
+
+function filterEnergieEntries(dataset) {
+	return dataset.map(entry => {
+		let cleanObject = {
+			gemeente: entry.Gemeente,
+			gemeenteCode: entry.gwb_code_10,
+			inwoners: entry.a_inw,
+			groenPercentage2018: entry[2018],
+		};
+
+		return cleanObject;
+	})
+};
 
