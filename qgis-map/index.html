@@ -15,6 +15,7 @@
     <body>
         <div id="overlay">
             <div class="sidebar sidebar-left">
+                <h2></h2>
             </div>
             <div class="sidebar sidebar-right">
             </div>
@@ -64,7 +65,7 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + '<h3>' +  (feature.properties['Gemeentena'] !== null ? autolinker.link(feature.properties['Gemeentena'].toLocaleString()) : '') + '</h3>' + '</td>\
+                        <td colspan="2">' + '<h3 class="gemeente-titel">' +  (feature.properties['Gemeentena'] !== null ? autolinker.link(feature.properties['Gemeentena'].toLocaleString()) : '') + '</h3>' + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Groene energie (2018):</th>\
