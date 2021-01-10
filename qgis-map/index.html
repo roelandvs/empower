@@ -63,7 +63,7 @@
                 },
                 mouseover: highlightFeature,
             });
-            var popupContent = '<table>\
+            var popupContent = '<table class="tooltippie">\
                     <tr>\
                         <td colspan="2">' + '<h3 class="gemeente-titel">' +  (feature.properties['Gemeentena'] !== null ? autolinker.link(feature.properties['Gemeentena'].toLocaleString()) : '') + '</h3>' + '</td>\
                     </tr>\
