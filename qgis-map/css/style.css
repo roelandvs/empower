@@ -30,29 +30,33 @@ body,
 }
 
 .sidebar {
-	min-width: 250px;
+	min-width: 225px;
 	z-index: 1100;
 	position: fixed;
 	top: 0;
 	background: #fff;
-	border-radius: 20px;
-	height: calc(100% - 100px);
 	box-shadow: 5px 5px 10px -4px rgba(0,0,0,0.1);
 	padding: 40px;
 }
 
 .sidebar h2 {
 	width: 150px;
+	font-size: 1.4em;
+	margin-top: 20px;
 }
 
 .sidebar-right {
 	right: 0;
 	margin: 50px;
+	border-radius: 20px;
+	height: calc(100% - 100px);
 	/*height: 500px;*/
 }
 
 .sidebar-left {
 	left: 0;
-	margin: 50px;
+	height: 100%;
+	border-radius: 0 50px 50px 0;
+	/*margin: 50px;*/
 	/*height: 100%;*/
 }
