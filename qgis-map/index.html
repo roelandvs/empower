@@ -10,16 +10,59 @@
         <link rel="stylesheet" href="css/leaflet-css/leaflet.css">
         <link rel="stylesheet" href="css/leaflet-css/qgis2web.css">
         <link rel="stylesheet" href="css/leaflet-css/fontawesome-all.min.css">
-        <title></title>
+        <title>Empower 2.0</title>
     </head>
+
     <body>
         <div id="overlay">
             <div class="sidebar sidebar-left">
-                <h2></h2>
-                <svg id="sidebar-svg">
-                    <path class="sidebar-gemeente"></path>
-                </svg>
+                <section>
+                    <h1>EMPOWER 2.0</h1>
+                    <p id="region">REGION</p>
+                    <h2></h2>
+
+                    <svg id="sidebar-svg">
+                        <path class="sidebar-gemeente"></path>
+                    </svg>
+
+                    <h3>Solar Penals</h3>
+                    <p>Solar field on roofs troughout the city</p>
+
+                    <h3>Biogas</h3>
+                    <p>Main energy from Biogas factory</p>
+
+                    <h3>Wind Energy</h3>
+                    <p>Main energy from wind park</p>
+                </section>
+
+                <section>
+                    <h2 id="initiative-title">Initiatives</h2>
+                    <div class="initiatives">
+                        <img src="images/initiative-1.png" alt="initiative">
+                        <div>
+                            <p>GroenWijk</p>
+                            <p>SOLAR</p>
+                        </div>
+                    </div>
+
+                   <div class="initiatives">
+                        <img src="images/initiative-2.png" alt="initiative">
+                        <div>
+                            <p>OmOns</p>
+                            <p>COMMUNITY BUILDER</p>
+                        </div>
+                    </div>
+
+                    <div class="initiatives">
+                        <img src="images/initiative-3.png" alt="initiative">
+                        <div>
+                            <p>Herman Groenveld</p>
+                            <p>WIND ENERGY</p>
+                        </div>
+                    </div>
+                </section>
             </div>
+
             <div class="sidebar sidebar-right">
             </div>
         </div>
@@ -77,38 +120,6 @@
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
-
-         // var popupContent = '<table>\
-         //            <tr>\
-         //                <td colspan="2">' + (feature.properties['FID'] !== null ? autolinker.link(feature.properties['FID'].toLocaleString()) : '') + '</td>\
-         //            </tr>\
-         //            <tr>\
-         //                <td colspan="2">' + (feature.properties['Code'] !== null ? autolinker.link(feature.properties['Code'].toLocaleString()) : '') + '</td>\
-         //            </tr>\
-         //            <tr>\
-         //                <td colspan="2">' + (feature.properties['Gemeentena'] !== null ? autolinker.link(feature.properties['Gemeentena'].toLocaleString()) : '') + '</td>\
-         //            </tr>\
-         //            <tr>\
-         //                <td colspan="2">' + (feature.properties['Gemeenteco'] !== null ? autolinker.link(feature.properties['Gemeenteco'].toLocaleString()) : '') + '</td>\
-         //            </tr>\
-         //            <tr>\
-         //                <td colspan="2">' + (feature.properties['SHAPE_Leng'] !== null ? autolinker.link(feature.properties['SHAPE_Leng'].toLocaleString()) : '') + '</td>\
-         //            </tr>\
-         //            <tr>\
-         //                <td colspan="2">' + (feature.properties['SHAPE_Area'] !== null ? autolinker.link(feature.properties['SHAPE_Area'].toLocaleString()) : '') + '</td>\
-         //            </tr>\
-         //            <tr>\
-         //                <td colspan="2"><strong>meer_gemeentes_gemeente</strong><br />' + (feature.properties['meer_gemeentes_gemeente'] !== null ? autolinker.link(feature.properties['meer_gemeentes_gemeente'].toLocaleString()) : '') + '</td>\
-         //            </tr>\
-         //            <tr>\
-         //                <td colspan="2">' + (feature.properties['meer_gemeentes_inwoners'] !== null ? autolinker.link(feature.properties['meer_gemeentes_inwoners'].toLocaleString()) : '') + '</td>\
-         //            </tr>\
-         //            <tr>\
-         //                <th scope="row">meer_gemeentes_groenPercentage2018</th>\
-         //                <td>' + (feature.properties['meer_gemeentes_groenPercentage2018'] !== null ? autolinker.link(feature.properties['meer_gemeentes_groenPercentage2018'].toLocaleString()) : '') + '</td>\
-         //            </tr>\
-         //        </table>';
-
 
                     // <tr>\
                     //     <td colspan="2">' + (feature.properties['FID'] !== null ? autolinker.link(feature.properties['FID'].toLocaleString()) : '') + '</td>\
