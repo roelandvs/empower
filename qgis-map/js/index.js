@@ -1,4 +1,5 @@
-let sidebar = document.querySelector(".sidebar");
+let initiativeSidebar = document.querySelector(".sidebar");
+// let menuSidebar = document.querySelector(".sidebar-menu");
 
 function buildSidebar(gemeente) {
 	let shapeClass = document.querySelector(".sidebar-gemeente");
@@ -11,7 +12,8 @@ function buildSidebar(gemeente) {
 	//makes title of sidebar the gemeente
 	sidebarTitle.innerText = gemeenteNaam[0].innerText;
 	shapeClass.setAttribute('d', shapeValues);
-	sidebar.style.left = '0';
+	// menuSidebar.style.left = '300px';
+	initiativeSidebar.style.left = '0';
 
 	//places the svg/path on point 0,0
 	if (yCoordinate < 0) {
@@ -24,8 +26,8 @@ function buildSidebar(gemeente) {
 };
 
 function moveSidebar() {
-	sidebar.style.left = '-300px';
-	console.log('ja');
+	initiativeSidebar.style.left = '-300px';
+	// menuSidebar.style.left = '0';
 }
 
 
