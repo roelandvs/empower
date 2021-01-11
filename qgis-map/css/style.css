@@ -52,7 +52,7 @@ p {
 #sidebar-away {
 	height: 40px;
 	width: 50px;
-	border-radius: 0 30px 30px 0;
+	border-radius: 0 20px 20px 0;
 	position: absolute;
 	top: 100px;
 	right: -30px;
@@ -78,12 +78,12 @@ p {
 .sidebar-menu {
 	position: absolute;
 	left: 0;
-	height: calc(100% - 80px);
-	width: 250px;
-	background-color: #fff;
+	/*height: calc(100% - 80px);*/
+	/*width: 250px;*/
+	/*background-color: #fff;*/
 	z-index: 1100;
-	margin: 40px 0;
-	opacity: 0.5;
+	margin: 30px 50px;
+	/*opacity: 0.5;*/
 	transition: 0.8s all;
 }
 
@@ -98,9 +98,10 @@ p {
 }
 
 .sidebar-left {
-	left: -300px;
+	left: -280px;
 	height: 100%;
-	border-radius: 0 50px 50px 0;
+	/*border-radius: 0 50px 50px 0;*/
+	border-radius: 0 20px 20px 0;
 	transition: 0.8s all;
 }
 
@@ -161,6 +162,36 @@ p {
 	width: 35px;
 	height: 35px;
 	margin-right: 10px;
+}
+
+.round-button {
+	height: 40px;
+	width: 40px;
+	border-radius: 100px;
+	background-color: #fff;
+	opacity: 0.9;
+	margin: 15px 0;
+	z-index: 1100;
+	cursor: pointer;
+	box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.1);
+}
+
+.round-button img {
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+}
+
+.round-button p {
+	color: #24337A;
+	font-size: 1.9em;
+	padding: 3px 9px;
+}
+
+.round-button:nth-child(3) img {
+	width: 20px;
+	height: 20px;
+	margin: 9px 10px;
 }
 
 /*.initiatives section {
