@@ -5,12 +5,14 @@ function buildSidebar(gemeente) {
 	let shapeClass = document.querySelector(".sidebar-gemeente");
 	let sidebarTitle = document.querySelector(".sidebar-left h2");
 	let gemeenteNaam = document.getElementsByClassName("gemeente-titel");
+	let gemeenteDing = document.getElementsByClassName("yo");
 	let shapeValues = gemeente.getAttribute('d');
 	let xCoordinate = gemeente.getBBox().x;
 	let yCoordinate = gemeente.getBBox().y;
 
 	//makes title of sidebar the gemeente
 	sidebarTitle.innerText = gemeenteNaam[0].innerText;
+	document.getElementById('population').innerText = gemeenteDing[0].innerText;
 	shapeClass.setAttribute('d', shapeValues);
 	menuSidebar.style.left = '250px';
 	initiativeSidebar.style.left = '0';

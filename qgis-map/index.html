@@ -31,14 +31,69 @@
                         <path class="sidebar-gemeente"></path>
                     </svg>
 
-                    <h3>Solar Penals</h3>
-                    <p>Solar field on roofs troughout the city</p>
+                    <div class="gemeente-stats">
+                        <img src="images/initiative-1.png" alt="">
+                        <div>
+                            <p>Surface</p>
+                            <p id="surface"></p>
+                        </div>
+                    </div>
 
-                    <h3>Biogas</h3>
-                    <p>Main energy from Biogas factory</p>
+                    <div class="gemeente-stats">
+                        <img src="images/initiative-1.png" alt="">
+                        <div>
+                            <p>Population</p>
+                            <p id="population"></p>
+                        </div>
+                    </div>
 
-                    <h3>Wind Energy</h3>
-                    <p>Main energy from wind park</p>
+                    <div class="gemeente-stats">
+                        <img src="images/initiative-1.png" alt="">
+                        <div>
+                            <p>Population density</p>
+                            <p id="density"></p>
+                        </div>
+                    </div>
+
+                    <div class="gemeente-stats">
+                        <img src="images/initiative-1.png" alt="">
+                        <div>
+                            <p>Number of houses</p>
+                            <p id="houses"></p>
+                        </div>
+                    </div>
+
+                    <div class="gemeente-stats">
+                        <img src="images/initiative-1.png" alt="">
+                        <div>
+                            <p>Average electricity use</p>
+                            <p id="electricity"></p>
+                        </div>
+                    </div>
+
+                    <div class="gemeente-stats">
+                        <img src="images/initiative-1.png" alt="">
+                        <div>
+                            <p>Average gas use</p>
+                            <p id="gas"></p>
+                        </div>
+                    </div>
+
+                    <div class="gemeente-stats">
+                        <img src="images/initiative-1.png" alt="">
+                        <div>
+                            <p>Businesses</p>
+                            <p id="businesses"></p>
+                        </div>
+                    </div>
+
+                    <div class="gemeente-stats">
+                        <img src="images/initiative-1.png" alt="">
+                        <div>
+                            <p>Amount of cars</p>
+                            <p id="cars"></p>
+                        </div>
+                    </div>
                 </section>
 
                 <section>
@@ -128,36 +183,119 @@
                     </tr>\
                     <tr>\
                         <th scope="row">Groene energie (2018):</th>\
-                        <td>' + (feature.properties['meer_gemeentes_groenPercentage2018'] !== null ? autolinker.link(feature.properties['meer_gemeentes_groenPercentage2018'].toLocaleString()) : '') + '%' + '</td>\
+                        <td>' + (feature.properties['complete_dataset_groenPercentage/2018'] !== null ? autolinker.link(feature.properties['complete_dataset_groenPercentage/2018'].toLocaleString()) : '') + '%' + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['FID'] !== null ? autolinker.link(feature.properties['FID'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['Code'] !== null ? autolinker.link(feature.properties['Code'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['Gemeenteco'] !== null ? autolinker.link(feature.properties['Gemeenteco'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['SHAPE_Leng'] !== null ? autolinker.link(feature.properties['SHAPE_Leng'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['SHAPE_Area'] !== null ? autolinker.link(feature.properties['SHAPE_Area'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_gemeenteNaam'] !== null ? autolinker.link(feature.properties['complete_dataset_gemeenteNaam'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display yo">' + (feature.properties['complete_dataset_inwoners'] !== null ? autolinker.link(feature.properties['complete_dataset_inwoners'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_huisHoudens'] !== null ? autolinker.link(feature.properties['complete_dataset_huisHoudens'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_bevolkingsDichtheid'] !== null ? autolinker.link(feature.properties['complete_dataset_bevolkingsDichtheid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_aantalWoningen'] !== null ? autolinker.link(feature.properties['complete_dataset_aantalWoningen'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_percentageBewoond'] !== null ? autolinker.link(feature.properties['complete_dataset_percentageBewoond'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_gemElekVerbuikKwh'] !== null ? autolinker.link(feature.properties['complete_dataset_gemElekVerbuikKwh'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_gemAardgasVerbruikM3'] !== null ? autolinker.link(feature.properties['complete_dataset_gemAardgasVerbruikM3'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_aantalBedrijfvestg'] !== null ? autolinker.link(feature.properties['complete_dataset_aantalBedrijfvestg'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_totaalPersonenAuto'] !== null ? autolinker.link(feature.properties['complete_dataset_totaalPersonenAuto'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_oppervlakteHa'] !== null ? autolinker.link(feature.properties['complete_dataset_oppervlakteHa'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_zonneStroomTj/2015'] !== null ? autolinker.link(feature.properties['complete_dataset_zonneStroomTj/2015'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_zonneStroomTj/2016'] !== null ? autolinker.link(feature.properties['complete_dataset_zonneStroomTj/2016'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_zonneStroomTj/2017'] !== null ? autolinker.link(feature.properties['complete_dataset_zonneStroomTj/2017'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_zonneStroomTj/2018'] !== null ? autolinker.link(feature.properties['complete_dataset_zonneStroomTj/2018'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_windStroomTj/2015'] !== null ? autolinker.link(feature.properties['complete_dataset_windStroomTj/2015'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_windStroomTj/2016'] !== null ? autolinker.link(feature.properties['complete_dataset_windStroomTj/2016'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_windStroomTj/2017'] !== null ? autolinker.link(feature.properties['complete_dataset_windStroomTj/2017'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_windStroomTj/2018'] !== null ? autolinker.link(feature.properties['complete_dataset_windStroomTj/2018'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_biogasStroomTj/2015'] !== null ? autolinker.link(feature.properties['complete_dataset_biogasStroomTj/2015'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_biogasStroomTj/2016'] !== null ? autolinker.link(feature.properties['complete_dataset_biogasStroomTj/2016'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_biogasStroomTj/2017'] !== null ? autolinker.link(feature.properties['complete_dataset_biogasStroomTj/2017'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_biogasStroomTj/2018'] !== null ? autolinker.link(feature.properties['complete_dataset_biogasStroomTj/2018'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_groenPercentage/2015'] !== null ? autolinker.link(feature.properties['complete_dataset_groenPercentage/2015'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_groenPercentage/2016'] !== null ? autolinker.link(feature.properties['complete_dataset_groenPercentage/2016'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_groenPercentage/2017'] !== null ? autolinker.link(feature.properties['complete_dataset_groenPercentage/2017'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_totaalEnergieGebruik/2015'] !== null ? autolinker.link(feature.properties['complete_dataset_totaalEnergieGebruik/2015'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_totaalEnergieGebruik/2016'] !== null ? autolinker.link(feature.properties['complete_dataset_totaalEnergieGebruik/2016'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_totaalEnergieGebruik/2017'] !== null ? autolinker.link(feature.properties['complete_dataset_totaalEnergieGebruik/2017'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2" class="no-display">' + (feature.properties['complete_dataset_totaalEnergieGebruik/2018'] !== null ? autolinker.link(feature.properties['complete_dataset_totaalEnergieGebruik/2018'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-                    // <tr>\
-                    //     <td colspan="2">' + (feature.properties['FID'] !== null ? autolinker.link(feature.properties['FID'].toLocaleString()) : '') + '</td>\
-                    // </tr>\
-                    // <tr>\
-                    //     <td colspan="2">' + (feature.properties['Code'] !== null ? autolinker.link(feature.properties['Code'].toLocaleString()) : '') + '</td>\
-                    // </tr>\
-                    // <tr>\
-                    //     <td colspan="2">' + (feature.properties['Gemeenteco'] !== null ? autolinker.link(feature.properties['Gemeenteco'].toLocaleString()) : '') + '</td>\
-                    // </tr>\
-                    // <tr>\
-                    //     <td colspan="2">' + (feature.properties['SHAPE_Leng'] !== null ? autolinker.link(feature.properties['SHAPE_Leng'].toLocaleString()) : '') + '</td>\
-                    // </tr>\
-                    // <tr>\
-                    //     <td colspan="2">' + (feature.properties['SHAPE_Area'] !== null ? autolinker.link(feature.properties['SHAPE_Area'].toLocaleString()) : '') + '</td>\
-                    // </tr>\
-                    // <tr>\
-                    //     <td colspan="2"><strong>meer_gemeentes_gemeente</strong><br />' + (feature.properties['meer_gemeentes_gemeente'] !== null ? autolinker.link(feature.properties['meer_gemeentes_gemeente'].toLocaleString()) : '') + '</td>\
-                    // </tr>\
-                    // <tr>\
-                    //     <td colspan="2">' + (feature.properties['meer_gemeentes_inwoners'] !== null ? autolinker.link(feature.properties['meer_gemeentes_inwoners'].toLocaleString()) : '') + '</td>\
-                    // </tr>\
-
-        function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0(feature) {
-            switch(String(feature.properties['meer_gemeentes_groenPercentage2018'])) {
+         function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0(feature) {
+            switch(String(feature.properties['complete_dataset_groenPercentage/2018'])) {
                 case '0':
                     return {
                 pane: 'pane_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0',
