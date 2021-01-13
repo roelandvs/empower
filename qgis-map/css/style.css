@@ -24,7 +24,6 @@ h1 {
 }
 
 h2 {
-	width: 150px;
 	font-size: 1.3em;
 	margin-bottom: 20px;
 }
@@ -84,12 +83,27 @@ p {
 	margin-bottom: 5px;
 }
 
-.sidebar-menu {
+.energy-buttons,
+.year-selector {
 	position: absolute;
 	left: 0;
 	z-index: 1100;
 	margin: 30px 50px;
 	transition: 0.8s all;
+	/*border: 1px solid;*/
+}
+
+.year-selector {
+	bottom: 0;
+	background-color: #fff;
+	opacity: 0.9;
+	border-radius: 20px;
+	padding: 15px 20px 5px;
+	box-shadow: 5px 5px 10px -4px rgba(0,0,0,0.1);
+}
+
+.year-selector p {
+	margin: 10px 2px;
 }
 
 .sidebar-right {
