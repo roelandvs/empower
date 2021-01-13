@@ -5,14 +5,30 @@ function buildSidebar(gemeente) {
 	let shapeClass = document.querySelector(".sidebar-gemeente");
 	let sidebarTitle = document.querySelector(".sidebar-left h2");
 	let gemeenteNaam = document.getElementsByClassName("gemeente-titel");
-	let gemeenteDing = document.getElementsByClassName("yo");
+
+	let inwonersTekst = document.getElementById("population");
+	let oppervlakteTekst = document.getElementById("surface");
+	let bevDichtheidTekst = document.getElementById("density");
+	let woningenTekst = document.getElementById("houses");
+	let elektTekst = document.getElementById("electricity");
+	let gasTekst = document.getElementById("gas");
+	let bedrijvenTekst = document.getElementById("businesses");
+	let autosTekst = document.getElementById("cars");
 	let shapeValues = gemeente.getAttribute('d');
 	let xCoordinate = gemeente.getBBox().x;
 	let yCoordinate = gemeente.getBBox().y;
 
 	//makes title of sidebar the gemeente
 	sidebarTitle.innerText = gemeenteNaam[0].innerText;
-	document.getElementById('population').innerText = gemeenteDing[0].innerText;
+	inwonersTekst.innerText = document.getElementById('population-s').innerText;
+	oppervlakteTekst.innerText = document.getElementById('surface-s').innerText;
+	bevDichtheidTekst.innerText = document.getElementById('density-s').innerText;
+	woningenTekst.innerText = document.getElementById('houses-s').innerText;
+	elektTekst.innerText = document.getElementById('electricity-s').innerText;
+	gasTekst.innerText = document.getElementById('gas-s').innerText;
+	bedrijvenTekst.innerText = document.getElementById('businesses-s').innerText;
+	autosTekst.innerText = document.getElementById('cars-s').innerText;
+
 	shapeClass.setAttribute('d', shapeValues);
 	menuSidebar.style.left = '250px';
 	initiativeSidebar.style.left = '0';
