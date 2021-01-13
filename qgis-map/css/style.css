@@ -210,13 +210,17 @@ p {
 	transition: 0.5s all;
 }
 
-/*.round-button:hover {
+.round-button:hover {
 	background-color: #6A67F6;
-}*/
+}
 
-/*.round-button:hover p {
+.round-button:hover p {
 	color: #fff;
-}*/
+}
+
+.round-button:hover img {
+	fill: #fff;
+}
 
 .round-button img {
 	width: 30px;
@@ -237,10 +241,6 @@ p {
 	margin: 9px 10px;
 }
 
-/*.initiatives section {
-	overflow: scroll;
-}
-*/
 #initiative-title {
 	margin: 40px 0 10px;
 	font-size: 1.2em;

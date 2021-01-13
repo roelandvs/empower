@@ -46,7 +46,30 @@ function buildSidebar(gemeente) {
 function moveSidebar() {
 	initiativeSidebar.style.left = '-300px';
 	menuSidebar.style.left = '0';
-}
+	console.log(datasetArray)
+};
 
+function changeYear() {
+	jaar = '2017';
+	propertyValue = 'complete_dataset_groenPercentage/' + jaar;
 
+	datasetArray.map(entry => {
+		style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0(entry)
+	})
+
+	map.createPane('pane_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0');
+    var layer_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0 = new L.geoJson(json_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0, {
+        // attribution: '',
+        interactive: true,
+        dataVar: 'json_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0',
+        // layerName: 'layer_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0',
+        // pane: 'pane_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0',
+        onEachFeature: pop_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0,
+        style: style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0,
+    });
+    map.addLayer(layer_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0);
+    setBounds();
+};
+
+document.getElementById("yo").addEventListener("click", changeYear);
 document.getElementById("sidebar-away").addEventListener("click", moveSidebar);

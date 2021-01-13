@@ -129,10 +129,10 @@
             <div class="round-button"><p>%</p></div>
             <!-- <div class="round-button"><svg src="images/sun-icon.svg"></svg></div> -->
             <div class="round-button"><img src="images/sun-icon.png" alt="sun icon"></div>
-            <div class="round-button"><img src="images/wind-icon.png" alt="wind icon"></div>
+            <div class="round-button"><img src="images/wind-icon.svg" alt="wind icon"></div>
         </div>
 
-        <div class="sidebar sidebar-right">
+        <div class="sidebar sidebar-right" id="yo">
         </div>
 
         <div id="map">
@@ -156,7 +156,7 @@
             highlightLayer.openPopup();
         }
         var map = L.map('map', {
-            zoomControl:true, maxZoom:10, minZoom:9
+            zoomControl:true, maxZoom:9, minZoom:9
         }).fitBounds([[50.105460973125716,2.57418013160256],[54.1218397752703,8.280539894436483]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
@@ -294,8 +294,13 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-         function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0(feature) {
-            switch(String(feature.properties['complete_dataset_groenPercentage/2018'])) {
+        let propertyValue = 'complete_dataset_groenPercentage/2018';
+        let datasetArray = [];
+
+        function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0(feature) {
+            datasetArray.push(feature);
+
+            switch(String(feature.properties[propertyValue])) {
                 case '0':
                     return {
                 pane: 'pane_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0',
@@ -2093,6 +2098,21 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(93,225,124,1.0)',
+                interactive: true,
+            }
+                  break;
+                default:
+                    return {
+                pane: 'pane_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0',
+                opacity: 1,
+                color: 'rgba(255,255,255,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(204,204,204,1.0)',
                 interactive: true,
             }
                     break;
