@@ -5,7 +5,5 @@ function highlightFeature(e) {
     highlightLayer.openPopup();
 }
 
-var hash = new L.Hash(map);
-
 function setBounds() {
 }

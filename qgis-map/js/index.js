@@ -100,4 +100,33 @@ function changeYear(jaarItem) {
     map.addLayer(layer_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0);
 };
 
+function makeZonnestroom() {
+	let svgGroup = document.getElementsByTagName("g")[0];
+	
+	datasetArray.map(entry => {
+		zonneStroom(entry)
+	});
+
+	//makes array with all datasets empty before all elements get pushed again
+	datasetArray = [];
+
+	//removes all paths before they get drawn again below
+	for (let element of svgGroup.children) {
+		element.remove();
+	};
+
+	//draws all gemeentes. This is copied from the leaflet code in index.html
+    var layer_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0 = new L.geoJson(json_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0',
+            layerName: 'layer_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0',
+            pane: 'pane_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0',
+            onEachFeature: pop_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0,
+            style: zonneStroom,
+        });
+    map.addLayer(layer_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0);
+}
+
+document.getElementById("sun").addEventListener("click", makeZonnestroom);
 document.getElementById("sidebar-away").addEventListener("click", moveSidebar);

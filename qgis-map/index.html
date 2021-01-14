@@ -128,7 +128,7 @@
 
         <div class="energy-buttons">
             <div class="round-button"><p>%</p></div>
-            <div class="round-button"><img src="images/sun-icon.png" alt="sun icon"></div>
+            <div class="round-button" id="sun"><img src="images/sun-icon.png" alt="sun icon"></div>
             <div class="round-button"><img src="images/wind-icon.svg" alt="wind icon"></div>
         </div>
 
@@ -151,6 +151,7 @@
         <script src="js/tooltip.js"></script>
         <script src="js/generate-color.js"></script>
         <script src="js/highlight-layer.js"></script>
+        <script src="js/zonnestroom.js"></script>
         <script src="js/leaflet-js/qgis2web_expressions.js"></script>
         <script src="js/leaflet-js/leaflet.js"></script>
         <script src="js/leaflet-js/leaflet.rotatedMarker.js"></script>
@@ -164,11 +165,13 @@
         <script>
         
         var map = L.map('map', {
-            zoomControl:true, minZoom:8.5, maxZoom:9
+            zoomControl:true, minZoom:9, maxZoom:9.5
         }).fitBounds([[50.105460973125716,2.57418013160256],[54.1218397752703,8.280539894436483]]);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         var bounds_group = new L.featureGroup([]);
+        var hash = new L.Hash(map);
+
 
         map.createPane('pane_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0');
         map.getPane('pane_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0').style.zIndex = 400;
