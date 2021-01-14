@@ -3,7 +3,6 @@
  * (c) 2010-2019 Vladimir Agafonkin, (c) 2010-2011 CloudMade
  */
 ! function(t, i) { "object" == typeof exports && "undefined" != typeof module ? i(exports) : "function" == typeof define && define.amd ? define(["exports"], i) : i(t.L = {}) }(this, function(t) { "use strict"; var i = Object.freeze;
-
     function h(t) { var i, e, n, o; for (e = 1, n = arguments.length; e < n; e++)
             for (i in o = arguments[e]) t[i] = o[i]; return t } Object.freeze = function(t) { return t }; var s = Object.create || function(t) { return e.prototype = t, new e };
 

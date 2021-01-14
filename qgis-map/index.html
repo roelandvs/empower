@@ -16,6 +16,7 @@
     </head>
 
     <body>
+        <div id="test">
         <div class="sidebar sidebar-left">
             <div id="sidebar-away">
                 <img src="images/arrow-left.png" alt="arrow">
@@ -133,13 +134,14 @@
 
         <div class="year-selector">
             <h2>Year</h2>
-            <p>2015</p>
-            <p>2016</p>
-            <p>2017</p>
-            <p>2018</p>
+            <p onclick="changeYear(this)" class="active-year">2018</p>
+            <p onclick="changeYear(this)">2017</p>
+            <p onclick="changeYear(this)">2016</p>
+            <p onclick="changeYear(this)">2015</p>
         </div>
 
         <div class="sidebar sidebar-right" id="yo">
+        </div>
         </div>
 
         <div id="map">
@@ -163,7 +165,7 @@
             highlightLayer.openPopup();
         }
         var map = L.map('map', {
-            zoomControl:true, maxZoom:9, minZoom:9
+            zoomControl:true, maxZoom:9.5, minZoom:9
         }).fitBounds([[50.105460973125716,2.57418013160256],[54.1218397752703,8.280539894436483]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
@@ -320,6 +322,21 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(204,204,204,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '1.1':
+                    return {
+                pane: 'pane_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0',
+                opacity: 1,
+                color: 'rgba(255,255,255,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,103,35,1.0)',
                 interactive: true,
             }
                     break;
