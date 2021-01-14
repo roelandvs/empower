@@ -36,6 +36,10 @@ p {
 	fill: #B3C5D7;
 }*/
 
+/*.empower {
+	stroke: #000;
+}*/
+
 .empower:hover {
 	stroke-width: 3;
 }
