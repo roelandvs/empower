@@ -1,7 +1,7 @@
 let initiativeSidebar = document.querySelector(".sidebar");
 let buttonContainer = document.querySelector(".energy-buttons");
 let yearContainer = document.querySelector(".year-selector");
-let yearMenu = document.querySelectorAll(".year-selector > p");
+let yearMenuItems = document.querySelectorAll(".year-selector > p");
 
 function buildSidebar(gemeente) {
 	if (gemeente.ondragend) {
@@ -57,9 +57,19 @@ function moveSidebar() {
 	yearContainer.style.left = '0';
 };
 
-function changeYear(jaarClick) {
-	let jaar = jaarClick.innerText;
+function changeYear(jaarItem) {
+	let jaar = jaarItem.innerText;
 	let svgGroup = document.getElementsByTagName("g")[0];
+
+	// removes active class from all years
+	yearMenuItems.forEach(item => {
+		if (item.classList.contains('active-year')) {
+			item.classList.remove('active-year')
+		}
+	});
+
+	// adds active year class to correct year
+	jaarItem.classList.add('active-year');
 
 	//updates year
 	propertyValue = 'complete_dataset_groenPercentage/' + jaar;
