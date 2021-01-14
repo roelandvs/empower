@@ -240,6 +240,7 @@ p {
 	cursor: pointer;
 	box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.1);
 	transition: 0.5s all;
+	color: #24337A;
 }
 
 .round-button:hover {
@@ -261,7 +262,6 @@ p {
 }
 
 .round-button p {
-	color: #24337A;
 	font-size: 1.9em;
 	padding: 3px 9px;
 	transition: 0.5s all;
@@ -286,4 +286,9 @@ p {
 	font-weight: 700;
 	box-shadow: 3px 3px 10px -2px rgba(0,0,0,0.15);
 	transition: 0.8s all;
+}
+
+.active-energy {
+	background-color: #6A67F6;
+	color: #fff;
 }

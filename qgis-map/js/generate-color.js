@@ -1,9 +1,10 @@
-let propertyValue = 'complete_dataset_groenPercentage/2018';
+let propertyValue = 'groenPercentage/';
+let currentYear = '2018'
 let datasetArray = [];
 
 function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0(feature) {
             datasetArray.push(feature);
-            switch(String(feature.properties[propertyValue])) {
+            switch(String(feature.properties['complete_dataset_' + propertyValue + currentYear])) {
                 case '0':
                     return {
                 pane: 'pane_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0',
