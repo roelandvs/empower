@@ -2,6 +2,7 @@ let initiativeSidebar = document.querySelector(".sidebar");
 let buttonContainer = document.querySelector(".energy-buttons");
 let yearContainer = document.querySelector(".year-selector");
 let yearMenuItems = document.querySelectorAll(".year-selector > p");
+let energyItems = document.querySelectorAll(".energy-buttons > div");
 
 function buildSidebar(gemeente) {
 	if (gemeente.ondragend) {
@@ -75,20 +76,31 @@ function changeYear(jaarItem) {
 	generateNewPath();
 };
 
+function colorEnergyButton(buttonItem) {
+	energyItems.forEach(item => {
+		if (item.classList.contains('active-energy')) {
+			item.classList.remove('active-energy')
+		}
+	});
+
+	// adds active energy class to correct button
+	buttonItem.classList.add('active-energy');
+};
+
 function switchZonneEnergie() {
 	propertyValue = 'zonneStroomTj/';
 	generateNewPath();
-}
+};
 
 function switchGroenPercentage() {
 	propertyValue = 'groenPercentage/';
 	generateNewPath();
-}
+};
 
 function switchWindEnergie() {
 	propertyValue = 'windStroomTj/';
 	generateNewPath();
-}
+};
 
 function generateNewPath() {
 	let svgGroup = document.getElementsByTagName("g")[0];
