@@ -24,17 +24,27 @@ h1 {
 }
 
 h2 {
-	font-size: 1.3em;
+	font-size: 1.4em;
 	margin-bottom: 20px;
+}
+
+h3 {
+	font-size: 1.3em;
 }
 
 p {
 	font-size: 0.9em;
 }
 
-/*.empower:not(:hover) {
-	fill: #B3C5D7;
-}*/
+th {
+	font-size: 1.2em;
+	font-weight: 400;
+}
+
+td:nth-child(2) {
+	font-size: 1.2em;
+	font-weight: 700;
+}
 
 .empower:hover {
 	stroke-width: 3;
@@ -252,7 +262,7 @@ p {
 }
 
 .round-button:hover img {
-	fill: #fff;
+	filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(197deg) brightness(106%) contrast(104%);
 }
 
 .round-button img {
@@ -264,7 +274,6 @@ p {
 .round-button p {
 	font-size: 1.9em;
 	padding: 3px 9px;
-	transition: 0.5s all;
 }
 
 .round-button:nth-child(3) img {
@@ -278,7 +287,6 @@ p {
 	/*height: 20px;*/
 	margin: 6px 8px;
 }
-
 
 #initiative-title {
 	margin: 40px 0 10px;
@@ -299,3 +307,11 @@ p {
 	background-color: #6A67F6;
 	color: #fff;
 }
+
+.active-energy img {
+	filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(197deg) brightness(106%) contrast(104%);
+}
+
+/*#tooltip tr {
+	display: none;
+}*/

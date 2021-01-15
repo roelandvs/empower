@@ -1,6 +1,8 @@
 let propertyValue = 'groenPercentage/';
 let currentYear = '2018'
 let datasetArray = [];
+let popupEnergyType = 'Groene energie:';
+let energySymbol = '%';
 
 function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0(feature) {
     datasetArray.push(feature);

@@ -1,57 +1,51 @@
-let initiativeSidebar = document.querySelector(".sidebar");
-let buttonContainer = document.querySelector(".energy-buttons");
-let yearContainer = document.querySelector(".year-selector");
-let yearMenuItems = document.querySelectorAll(".year-selector > p");
-let energyItems = document.querySelectorAll(".energy-buttons > div");
-
-// map.setView(center, 9);
-// console.log('mappie', map)
+const initiativeSidebar = document.querySelector(".sidebar");
+const buttonContainer = document.querySelector(".energy-buttons");
+const yearContainer = document.querySelector(".year-selector");
+const yearMenuItems = document.querySelectorAll(".year-selector > p");
+const energyItems = document.querySelectorAll(".energy-buttons > div");
+const gemeentes = Array.from(document.getElementsByClassName("empower"));
 
 function buildSidebar(gemeente) {
-	if (gemeente.ondragend) {
-		// console.log(gemeente.isDragging)
+	const shapeClass = document.querySelector(".sidebar-gemeente");
+	const sidebarTitle = document.querySelector(".sidebar-left h2");
+	const gemeenteNaam = document.getElementsByClassName("gemeente-titel");
+
+	const inwonersTekst = document.getElementById("population");
+	const oppervlakteTekst = document.getElementById("surface");
+	const bevDichtheidTekst = document.getElementById("density");
+	const woningenTekst = document.getElementById("houses");
+	const elektTekst = document.getElementById("electricity");
+	const gasTekst = document.getElementById("gas");
+	const bedrijvenTekst = document.getElementById("businesses");
+	const autosTekst = document.getElementById("cars");
+	const shapeValues = gemeente.getAttribute('d');
+	const xCoordinate = gemeente.getBBox().x;
+	const yCoordinate = gemeente.getBBox().y;
+
+	//fills all the text of the sidebar with info
+	sidebarTitle.innerText = gemeenteNaam[0].innerText;
+	inwonersTekst.innerText = document.getElementById('population-s').innerText;
+	oppervlakteTekst.innerText = document.getElementById('surface-s').innerText;
+	bevDichtheidTekst.innerText = document.getElementById('density-s').innerText;
+	woningenTekst.innerText = document.getElementById('houses-s').innerText;
+	elektTekst.innerText = document.getElementById('electricity-s').innerText;
+	gasTekst.innerText = document.getElementById('gas-s').innerText;
+	bedrijvenTekst.innerText = document.getElementById('businesses-s').innerText;
+	autosTekst.innerText = document.getElementById('cars-s').innerText;
+
+	//makes the gemeente shape in sidebar
+	shapeClass.setAttribute('d', shapeValues);
+	buttonContainer.style.left = '240px';
+	yearContainer.style.left = '240px';
+	initiativeSidebar.style.left = '0';
+
+	//places the gemeente svg/path on point 0,0
+	if (yCoordinate < 0) {
+		shapeClass.style.transform = "translate(" + "-" + xCoordinate + "px," + (yCoordinate * -1) + "px)";
+	} else if (xCoordinate < 0) {
+		shapeClass.style.transform = "translate(" + (xCoordinate * -1) + "px, -" + yCoordinate + "px)";
 	} else {
-		let shapeClass = document.querySelector(".sidebar-gemeente");
-		let sidebarTitle = document.querySelector(".sidebar-left h2");
-		let gemeenteNaam = document.getElementsByClassName("gemeente-titel");
-
-		let inwonersTekst = document.getElementById("population");
-		let oppervlakteTekst = document.getElementById("surface");
-		let bevDichtheidTekst = document.getElementById("density");
-		let woningenTekst = document.getElementById("houses");
-		let elektTekst = document.getElementById("electricity");
-		let gasTekst = document.getElementById("gas");
-		let bedrijvenTekst = document.getElementById("businesses");
-		let autosTekst = document.getElementById("cars");
-		let shapeValues = gemeente.getAttribute('d');
-		let xCoordinate = gemeente.getBBox().x;
-		let yCoordinate = gemeente.getBBox().y;
-
-		//fills all the text of the sidebar with info
-		sidebarTitle.innerText = gemeenteNaam[0].innerText;
-		inwonersTekst.innerText = document.getElementById('population-s').innerText;
-		oppervlakteTekst.innerText = document.getElementById('surface-s').innerText;
-		bevDichtheidTekst.innerText = document.getElementById('density-s').innerText;
-		woningenTekst.innerText = document.getElementById('houses-s').innerText;
-		elektTekst.innerText = document.getElementById('electricity-s').innerText;
-		gasTekst.innerText = document.getElementById('gas-s').innerText;
-		bedrijvenTekst.innerText = document.getElementById('businesses-s').innerText;
-		autosTekst.innerText = document.getElementById('cars-s').innerText;
-
-		//makes the gemeente shape in sidebar
-		shapeClass.setAttribute('d', shapeValues);
-		buttonContainer.style.left = '240px';
-		yearContainer.style.left = '240px';
-		initiativeSidebar.style.left = '0';
-
-		//places the gemeente svg/path on point 0,0
-		if (yCoordinate < 0) {
-			shapeClass.style.transform = "translate(" + "-" + xCoordinate + "px," + (yCoordinate * -1) + "px)";
-		} else if (xCoordinate < 0) {
-			shapeClass.style.transform = "translate(" + (xCoordinate * -1) + "px, -" + yCoordinate + "px)";
-		} else {
-			shapeClass.style.transform = "translate(" + "-" + xCoordinate + "px, -" + yCoordinate + "px)";
-		}
+		shapeClass.style.transform = "translate(" + "-" + xCoordinate + "px, -" + yCoordinate + "px)";
 	}
 };
 
@@ -62,7 +56,7 @@ function moveSidebar() {
 };
 
 function changeYear(jaarItem) {
-	let jaar = jaarItem.innerText;
+	const jaar = jaarItem.innerText;
 
 	// removes active class from all years
 	yearMenuItems.forEach(item => {
@@ -92,27 +86,34 @@ function colorEnergyButton(buttonItem) {
 
 function switchZonneEnergie() {
 	propertyValue = 'zonneStroomTj/';
+	popupEnergyType = 'Zonnestroom:';
+    energySymbol = ' TJ';
 	generateNewPath();
 };
 
 function switchGroenPercentage() {
 	propertyValue = 'groenPercentage/';
+	popupEnergyType = 'Groene energie:';
+    energySymbol = '%';
 	generateNewPath();
 };
 
 function switchWindEnergie() {
 	propertyValue = 'windStroomTj/';
+	popupEnergyType = 'Windstroom:';
+    energySymbol = ' TJ';
 	generateNewPath();
 };
 
 function switchBiogasEnergie() {
 	propertyValue = 'biogasStroomTj/';
+	popupEnergyType = 'Biogasstroom:';
+    energySymbol = ' TJ';
 	generateNewPath();
 };
 
 function generateNewPath() {
 	let svgGroup = document.getElementsByTagName("g")[0];
-	console.log(map)
 
 	//makes array with all datasets empty before all elements get pushed again
 	datasetArray = [];
