@@ -273,6 +273,13 @@ p {
 	margin: 9px 10px;
 }
 
+.round-button:nth-child(4) img {
+	width: 25px;
+	/*height: 20px;*/
+	margin: 6px 8px;
+}
+
+
 #initiative-title {
 	margin: 40px 0 10px;
 	font-size: 1.2em;

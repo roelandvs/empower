@@ -4,6 +4,9 @@ let yearContainer = document.querySelector(".year-selector");
 let yearMenuItems = document.querySelectorAll(".year-selector > p");
 let energyItems = document.querySelectorAll(".energy-buttons > div");
 
+// map.setView(center, 9);
+// console.log('mappie', map)
+
 function buildSidebar(gemeente) {
 	if (gemeente.ondragend) {
 		// console.log(gemeente.isDragging)
@@ -102,8 +105,14 @@ function switchWindEnergie() {
 	generateNewPath();
 };
 
+function switchBiogasEnergie() {
+	propertyValue = 'biogasStroomTj/';
+	generateNewPath();
+};
+
 function generateNewPath() {
 	let svgGroup = document.getElementsByTagName("g")[0];
+	console.log(map)
 
 	//makes array with all datasets empty before all elements get pushed again
 	datasetArray = [];
@@ -129,4 +138,5 @@ function generateNewPath() {
 document.getElementById("sun").addEventListener("click", switchZonneEnergie);
 document.getElementById("percentage").addEventListener("click", switchGroenPercentage);
 document.getElementById("wind").addEventListener("click", switchWindEnergie);
+document.getElementById("biogas").addEventListener("click", switchBiogasEnergie);
 document.getElementById("sidebar-away").addEventListener("click", moveSidebar);

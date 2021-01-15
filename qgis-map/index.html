@@ -130,6 +130,7 @@
             <div onclick="colorEnergyButton(this)" class="round-button active-energy" id="percentage"><p>%</p></div>
             <div onclick="colorEnergyButton(this)" class="round-button" id="sun"><img src="images/sun-icon.png" alt="sun icon"></div>
             <div onclick="colorEnergyButton(this)" class="round-button" id="wind"><img src="images/wind-icon.svg" alt="wind icon"></div>
+            <div onclick="colorEnergyButton(this)" class="round-button" id="biogas"><img src="images/biogas-icon.svg" alt="wind icon"></div>
         </div>
 
         <div class="year-selector">
@@ -164,13 +165,13 @@
         <script>
         
         var map = L.map('map', {
-            zoomControl:true, minZoom:9, maxZoom:9.5
+            zoomControl:true, minZoom:8, maxZoom:9.5
         }).fitBounds([[50.105460973125716,2.57418013160256],[54.1218397752703,8.280539894436483]]);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         var bounds_group = new L.featureGroup([]);
         var hash = new L.Hash(map);
-
+        map.setZoom(9);
 
         map.createPane('pane_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0');
         map.getPane('pane_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0').style.zIndex = 400;
