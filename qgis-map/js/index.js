@@ -86,28 +86,28 @@ function colorEnergyButton(buttonItem) {
 
 function switchZonneEnergie() {
 	propertyValue = 'zonneStroomTj/';
-	popupEnergyType = 'Zonnestroom:';
+	popupEnergyType = 'Solar energy:';
     energySymbol = ' TJ';
 	generateNewPath();
 };
 
 function switchGroenPercentage() {
 	propertyValue = 'groenPercentage/';
-	popupEnergyType = 'Groene energie:';
+	popupEnergyType = 'Green energy:';
     energySymbol = '%';
 	generateNewPath();
 };
 
 function switchWindEnergie() {
 	propertyValue = 'windStroomTj/';
-	popupEnergyType = 'Windstroom:';
+	popupEnergyType = 'Wind energy:';
     energySymbol = ' TJ';
 	generateNewPath();
 };
 
 function switchBiogasEnergie() {
 	propertyValue = 'biogasStroomTj/';
-	popupEnergyType = 'Biogasstroom:';
+	popupEnergyType = 'Biogas power:';
     energySymbol = ' TJ';
 	generateNewPath();
 };
