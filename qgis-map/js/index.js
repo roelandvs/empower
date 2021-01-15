@@ -2,7 +2,7 @@ const initiativeSidebar = document.querySelector(".sidebar");
 const buttonContainer = document.querySelector(".energy-buttons");
 const yearContainer = document.querySelector(".year-selector");
 const yearMenuItems = document.querySelectorAll(".year-selector > p");
-const energyItems = document.querySelectorAll(".energy-buttons > div");
+const energyItems = document.querySelectorAll(".energy-buttons > div > div");
 const gemeentes = Array.from(document.getElementsByClassName("empower"));
 
 function buildSidebar(gemeente) {

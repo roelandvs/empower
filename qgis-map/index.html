@@ -126,10 +126,33 @@
         </div>
 
         <div class="energy-buttons">
-            <div onclick="colorEnergyButton(this)" class="round-button active-energy" id="percentage"><p>%</p></div>
-            <div onclick="colorEnergyButton(this)" class="round-button" id="sun"><img src="images/sun-icon.png" alt="sun icon"></div>
-            <div onclick="colorEnergyButton(this)" class="round-button" id="wind"><img src="images/wind-icon.svg" alt="wind icon"></div>
-            <div onclick="colorEnergyButton(this)" class="round-button" id="biogas"><img src="images/biogas-icon.svg" alt="wind icon"></div>
+            <div>
+                <p class="energy-button-text">Overview</p>
+                <div onclick="colorEnergyButton(this)" class="round-button active-energy" id="percentage">
+                    <img src="images/overview-icon.svg" alt="overview icon">
+                </div>
+            </div>
+
+            <div>
+                <p class="energy-button-text">Solar energy</p>
+                <div onclick="colorEnergyButton(this)" class="round-button" id="sun">
+                    <img src="images/sun-icon.svg" alt="sun icon">
+                </div>
+            </div>
+
+            <div>
+                <p class="energy-button-text">Wind energy</p>
+                <div onclick="colorEnergyButton(this)" class="round-button" id="wind">
+                    <img src="images/wind-icon.svg" alt="wind icon">
+                </div>
+            </div>
+
+            <div>
+                <p class="energy-button-text">Biogas</p>
+                <div onclick="colorEnergyButton(this)" class="round-button" id="biogas">
+                    <img src="images/biogas-icon.svg" alt="wind icon">
+                </div>
+            </div>
         </div>
 
         <div class="year-selector">

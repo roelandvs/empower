@@ -24,12 +24,13 @@ h1 {
 }
 
 h2 {
-	font-size: 1.4em;
+	font-size: 1.3em;
 	margin-bottom: 20px;
 }
 
 h3 {
 	font-size: 1.3em;
+	color: #24337A;
 }
 
 p {
@@ -39,15 +40,18 @@ p {
 th {
 	font-size: 1.2em;
 	font-weight: 400;
+	color: #24337A;
 }
 
 td:nth-child(2) {
 	font-size: 1.2em;
 	font-weight: 700;
+	color: #24337A;
 }
 
 .empower:hover {
 	stroke-width: 3;
+	filter: brightness(1.5);
 }
 
 .no-display {
@@ -100,7 +104,6 @@ td:nth-child(2) {
 	z-index: 1100;
 	margin: 30px 50px;
 	transition: 0.8s all;
-	/*border: 1px solid;*/
 }
 
 .year-selector {
@@ -239,53 +242,82 @@ td:nth-child(2) {
 	margin-right: 10px;
 }
 
+.energy-buttons > div {
+	overflow: hidden;
+	height: 40px;
+	border-radius: 50px;
+	margin: 10px 0;
+	position: relative;
+}
+
+.energy-button-text {
+	position: absolute;
+	width: 160px;
+	text-align: right;
+	padding: 11px 20px 10px;
+	border-radius: 50px;
+	z-index: 1000;
+	transition: 0.5s all;
+	background-color: #9694FF;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1em;
+	left: -120px;
+}
+
+.energy-buttons div:nth-child(1) p {
+	width: 140px;
+}
+
+.energy-buttons div:nth-child(4) p {
+	width: 125px;
+}
+
 .round-button {
 	height: 40px;
 	width: 40px;
 	border-radius: 100px;
 	background-color: #fff;
-	opacity: 0.9;
-	margin: 15px 0;
 	z-index: 1100;
 	cursor: pointer;
 	box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.1);
 	transition: 0.5s all;
+	position: relative;
 	color: #24337A;
+	z-index: 1001;
 }
 
 .round-button:hover {
 	background-color: #6A67F6;
 }
 
-.round-button:hover p {
-	color: #fff;
+.round-button:hover img {
+	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(182deg) brightness(158%) contrast(102%);
 }
 
-.round-button:hover img {
-	filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(197deg) brightness(106%) contrast(104%);
+.energy-buttons > div:hover .energy-button-text {
+	left: 0px;
+}
+
+.energy-buttons > div:hover {
+	width: 160px;
 }
 
 .round-button img {
-	width: 30px;
-	height: 30px;
-	margin: 5px;
+	width: 28px;
+	height: 28px;
+	margin: 6px 6px;
 }
 
-.round-button p {
-	font-size: 1.9em;
-	padding: 3px 9px;
-}
-
-.round-button:nth-child(3) img {
-	width: 20px;
-	height: 20px;
-	margin: 9px 10px;
-}
-
-.round-button:nth-child(4) img {
+#wind img {
 	width: 25px;
-	/*height: 20px;*/
-	margin: 6px 8px;
+	height: 25px;
+	margin: 6px 9px;
+}
+
+#biogas img {
+	width: 27px;
+	margin: 8px 7px;
 }
 
 #initiative-title {
@@ -294,7 +326,6 @@ td:nth-child(2) {
 }
 
 /*JS classes*/
-
 .active-year {
 	background-color: #fff;
 	color: #6A67F6;
@@ -309,9 +340,5 @@ td:nth-child(2) {
 }
 
 .active-energy img {
-	filter: invert(95%) sepia(100%) saturate(0%) hue-rotate(197deg) brightness(106%) contrast(104%);
+	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(182deg) brightness(158%) contrast(102%);
 }
-
-/*#tooltip tr {
-	display: none;
-}*/
