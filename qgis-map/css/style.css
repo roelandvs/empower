@@ -145,6 +145,7 @@ td:nth-child(2) {
 	height: 470px;
 	opacity: 0.8;
 	padding: 30px 40px;
+	display: none;
 }
 
 .sidebar-left {
