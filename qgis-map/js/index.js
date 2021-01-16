@@ -67,7 +67,7 @@ function changeYear(jaarItem) {
 
 	// adds active year class to correct year
 	jaarItem.classList.add('active-year');
-
+ 
 	//updates year
 	currentYear = jaar;
 	generateNewPath();

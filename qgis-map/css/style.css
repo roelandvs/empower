@@ -249,6 +249,8 @@ td:nth-child(2) {
 	border-radius: 50px;
 	margin: 10px 0;
 	position: relative;
+	/*border: 1px solid;*/
+	transition: 0.5s all;
 }
 
 .energy-button-text {
@@ -281,7 +283,6 @@ td:nth-child(2) {
 	background-color: #fff;
 	z-index: 1100;
 	cursor: pointer;
-	box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.1);
 	transition: 0.5s all;
 	position: relative;
 	color: #24337A;
@@ -294,6 +295,7 @@ td:nth-child(2) {
 
 .round-button:hover img {
 	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(182deg) brightness(158%) contrast(102%);
+	transition: 0.5s all;
 }
 
 .energy-buttons > div:hover .energy-button-text {
@@ -302,6 +304,7 @@ td:nth-child(2) {
 
 .energy-buttons > div:hover {
 	width: 160px;
+
 }
 
 .round-button img {
