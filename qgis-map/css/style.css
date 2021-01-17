@@ -116,14 +116,22 @@ aside:nth-of-type(2) > div {
 .energy-container img {
 	width: 20px;
 	height: 20px;
+	margin: auto 10px auto 0;
 }
 
 .energy-container p {
-
+	font-size: 1.3em;
+	font-weight: 300;
 }
 
 .energy-container h3 {
 	font-weight: 500;
+	font-size: 0.95em;
+	margin-bottom: 10px;
+}
+
+.energy-container span {
+	font-weight: 600;
 }
 
 .empower:hover {
