@@ -1,13 +1,14 @@
-const initiativeSidebar = document.querySelector(".sidebar");
+const initiativeSidebar = document.querySelector("aside");
 const buttonContainer = document.querySelector(".energy-buttons");
 const yearContainer = document.querySelector(".year-selector");
 const yearMenuItems = document.querySelectorAll(".year-selector > p");
+// const energyButtons = document.getElementsByClassName("round-button");
 const energyItems = document.querySelectorAll(".energy-buttons > div > div");
 const gemeentes = Array.from(document.getElementsByClassName("empower"));
 
-function buildSidebar(gemeente) {
+function buildSidebarLeft(gemeente) {
 	const shapeClass = document.querySelector(".sidebar-gemeente");
-	const sidebarTitle = document.querySelector(".sidebar-left h2");
+	const sidebarTitle = document.querySelector("aside:nth-of-type(1) h2");
 	const gemeenteNaam = document.getElementsByClassName("gemeente-titel");
 
 	const inwonersTekst = document.getElementById("population");
@@ -21,6 +22,8 @@ function buildSidebar(gemeente) {
 	const shapeValues = gemeente.getAttribute('d');
 	const xCoordinate = gemeente.getBBox().x;
 	const yCoordinate = gemeente.getBBox().y;
+
+	buildSidebarRight(gemeente);
 
 	//fills all the text of the sidebar with info
 	sidebarTitle.innerText = gemeenteNaam[0].innerText;
@@ -47,6 +50,12 @@ function buildSidebar(gemeente) {
 	} else {
 		shapeClass.style.transform = "translate(" + "-" + xCoordinate + "px, -" + yCoordinate + "px)";
 	}
+};
+
+function buildSidebarRight(gemeente) {
+	const sidebarTitle = document.querySelector("aside:nth-of-type(2) h2");
+	const gemeenteNaam = document.getElementsByClassName("gemeente-titel");
+	sidebarTitle.innerText = gemeenteNaam[0].innerText;
 };
 
 function moveSidebar() {
@@ -136,8 +145,13 @@ function generateNewPath() {
     map.addLayer(layer_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0);
 };
 
+//doens't send 'this' to function unless inline onclick function
+// for (let button of energyButtons) {
+// 	button.addEventListener("click", colorEnergyButton(this));
+// };
 document.getElementById("sun").addEventListener("click", switchZonneEnergie);
 document.getElementById("percentage").addEventListener("click", switchGroenPercentage);
 document.getElementById("wind").addEventListener("click", switchWindEnergie);
 document.getElementById("biogas").addEventListener("click", switchBiogasEnergie);
 document.getElementById("sidebar-away").addEventListener("click", moveSidebar);
+

@@ -16,7 +16,7 @@
     </head>
 
     <body>
-        <div class="sidebar sidebar-left">
+        <aside>
             <div id="sidebar-away">
                 <img src="images/arrow-left.png" alt="arrow">
             </div>
@@ -123,7 +123,44 @@
                     </div>
                 </div>
             </section>
-        </div>
+        </aside>
+
+        <aside>
+            <h2>Den Haag</h2>
+            <div>
+                <div class="energy-container">
+                    <h3>Solar energy</h3>
+                    <div>
+                        <img src="images/sun-icon.svg" alt="sun icon">
+                        <p>100 TJ</p>
+                    </div>
+                </div>
+
+                <div class="energy-container">
+                    <h3>Wind energy</h3>
+                    <div>
+                        <img src="images/wind-icon.svg" alt="wind icon">
+                        <p>80 TJ</p>
+                    </div>
+                </div>
+
+                <div class="energy-container">
+                    <h3>Biogas energy</h3>
+                    <div>
+                        <img src="images/biogas-icon.svg" alt="biogas icon">
+                        <p>90 TJ</p>
+                    </div>
+                </div>
+
+                <div class="energy-container">
+                    <h3>Grey energy</h3>
+                    <div>
+                        <img src="images/sun-icon.svg" alt="sun icon">
+                        <p>120 TJ</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
 
         <div class="energy-buttons">
             <div>
@@ -150,7 +187,7 @@
             <div>
                 <p class="energy-button-text">Biogas</p>
                 <div onclick="colorEnergyButton(this)" class="round-button" id="biogas">
-                    <img src="images/biogas-icon.svg" alt="wind icon">
+                    <img src="images/biogas-icon.svg" alt="biogas icon">
                 </div>
             </div>
         </div>
@@ -161,10 +198,6 @@
             <p onclick="changeYear(this)">2017</p>
             <p onclick="changeYear(this)">2016</p>
             <p onclick="changeYear(this)">2015</p>
-        </div>
-
-        <div class="sidebar sidebar-right" id="yo">
-        </div>
         </div>
 
         <div id="map">
