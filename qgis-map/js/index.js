@@ -23,7 +23,7 @@ function buildSidebarLeft(gemeente) {
 	const xCoordinate = gemeente.getBBox().x;
 	const yCoordinate = gemeente.getBBox().y;
 
-	buildSidebarRight(gemeente);
+	buildSidebarRight();
 
 	//fills all the text of the sidebar with info
 	sidebarTitle.innerText = gemeenteNaam[0].innerText;
@@ -52,10 +52,17 @@ function buildSidebarLeft(gemeente) {
 	}
 };
 
-function buildSidebarRight(gemeente) {
+function buildSidebarRight() {
 	const sidebarTitle = document.querySelector("aside:nth-of-type(2) h2");
 	const gemeenteNaam = document.getElementsByClassName("gemeente-titel");
+	const energyStats = document.querySelectorAll(".energy-container span");
+
+	energyStats[0].innerText = document.getElementById('zonnestroom-' + currentYear).innerText;
+	energyStats[1].innerText = document.getElementById('windstroom-' + currentYear).innerText;
+	energyStats[2].innerText = document.getElementById('biogasstroom-' + currentYear).innerText;
+
 	sidebarTitle.innerText = gemeenteNaam[0].innerText;
+
 };
 
 function moveSidebar() {

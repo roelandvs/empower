@@ -75,51 +75,51 @@ function pop_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0(fea
             </tr>\
             <tr class="no-display">\
                 <th scope="row">complete_dataset_zonneStroomTj/2015</th>\
-                <td>' + (feature.properties['complete_dataset_zonneStroomTj/2015'] !== null ? autolinker.link(feature.properties['complete_dataset_zonneStroomTj/2015'].toLocaleString()) : '') + '</td>\
+                <td id="zonnestroom-2015">' + (feature.properties['complete_dataset_zonneStroomTj/2015'] !== null ? autolinker.link(feature.properties['complete_dataset_zonneStroomTj/2015'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
                 <th scope="row">complete_dataset_zonneStroomTj/2016</th>\
-                <td>' + (feature.properties['complete_dataset_zonneStroomTj/2016'] !== null ? autolinker.link(feature.properties['complete_dataset_zonneStroomTj/2016'].toLocaleString()) : '') + '</td>\
+                <td id="zonnestroom-2016">' + (feature.properties['complete_dataset_zonneStroomTj/2016'] !== null ? autolinker.link(feature.properties['complete_dataset_zonneStroomTj/2016'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
                 <th scope="row">complete_dataset_zonneStroomTj/2017</th>\
-                <td>' + (feature.properties['complete_dataset_zonneStroomTj/2017'] !== null ? autolinker.link(feature.properties['complete_dataset_zonneStroomTj/2017'].toLocaleString()) : '') + '</td>\
+                <td id="zonnestroom-2017">' + (feature.properties['complete_dataset_zonneStroomTj/2017'] !== null ? autolinker.link(feature.properties['complete_dataset_zonneStroomTj/2017'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
                 <th scope="row">complete_dataset_zonneStroomTj/2018</th>\
-                <td>' + (feature.properties['complete_dataset_zonneStroomTj/2018'] !== null ? autolinker.link(feature.properties['complete_dataset_zonneStroomTj/2018'].toLocaleString()) : '') + '</td>\
+                <td id="zonnestroom-2018">' + (feature.properties['complete_dataset_zonneStroomTj/2018'] !== null ? autolinker.link(feature.properties['complete_dataset_zonneStroomTj/2018'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
                 <th scope="row">complete_dataset_windStroomTj/2015</th>\
-                <td>' + (feature.properties['complete_dataset_windStroomTj/2015'] !== null ? autolinker.link(feature.properties['complete_dataset_windStroomTj/2015'].toLocaleString()) : '') + '</td>\
+                <td id="windstroom-2015">' + (feature.properties['complete_dataset_windStroomTj/2015'] !== null ? autolinker.link(feature.properties['complete_dataset_windStroomTj/2015'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
                 <th scope="row">complete_dataset_windStroomTj/2016</th>\
-                <td>' + (feature.properties['complete_dataset_windStroomTj/2016'] !== null ? autolinker.link(feature.properties['complete_dataset_windStroomTj/2016'].toLocaleString()) : '') + '</td>\
+                <td id="windstroom-2016">' + (feature.properties['complete_dataset_windStroomTj/2016'] !== null ? autolinker.link(feature.properties['complete_dataset_windStroomTj/2016'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
                 <th scope="row">complete_dataset_windStroomTj/2017</th>\
-                <td>' + (feature.properties['complete_dataset_windStroomTj/2017'] !== null ? autolinker.link(feature.properties['complete_dataset_windStroomTj/2017'].toLocaleString()) : '') + '</td>\
+                <td id="windstroom-2017">' + (feature.properties['complete_dataset_windStroomTj/2017'] !== null ? autolinker.link(feature.properties['complete_dataset_windStroomTj/2017'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
                 <th scope="row">complete_dataset_windStroomTj/2018</th>\
-                <td>' + (feature.properties['complete_dataset_windStroomTj/2018'] !== null ? autolinker.link(feature.properties['complete_dataset_windStroomTj/2018'].toLocaleString()) : '') + '</td>\
+                <td id="windstroom-2018">' + (feature.properties['complete_dataset_windStroomTj/2018'] !== null ? autolinker.link(feature.properties['complete_dataset_windStroomTj/2018'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
                 <th scope="row">complete_dataset_biogasStroomTj/2015</th>\
-                <td>' + (feature.properties['complete_dataset_biogasStroomTj/2015'] !== null ? autolinker.link(feature.properties['complete_dataset_biogasStroomTj/2015'].toLocaleString()) : '') + '</td>\
+                <td id="biogasstroom-2015">' + (feature.properties['complete_dataset_biogasStroomTj/2015'] !== null ? autolinker.link(feature.properties['complete_dataset_biogasStroomTj/2015'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
                 <th scope="row">complete_dataset_biogasStroomTj/2016</th>\
-                <td>' + (feature.properties['complete_dataset_biogasStroomTj/2016'] !== null ? autolinker.link(feature.properties['complete_dataset_biogasStroomTj/2016'].toLocaleString()) : '') + '</td>\
+                <td id="biogasstroom-2016">' + (feature.properties['complete_dataset_biogasStroomTj/2016'] !== null ? autolinker.link(feature.properties['complete_dataset_biogasStroomTj/2016'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
                 <th scope="row">complete_dataset_biogasStroomTj/2017</th>\
-                <td>' + (feature.properties['complete_dataset_biogasStroomTj/2017'] !== null ? autolinker.link(feature.properties['complete_dataset_biogasStroomTj/2017'].toLocaleString()) : '') + '</td>\
+                <td id="biogasstroom-2017">' + (feature.properties['complete_dataset_biogasStroomTj/2017'] !== null ? autolinker.link(feature.properties['complete_dataset_biogasStroomTj/2017'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
                 <th scope="row">complete_dataset_biogasStroomTj/2018</th>\
-                <td>' + (feature.properties['complete_dataset_biogasStroomTj/2018'] !== null ? autolinker.link(feature.properties['complete_dataset_biogasStroomTj/2018'].toLocaleString()) : '') + '</td>\
+                <td id="biogasstroom-2018">' + (feature.properties['complete_dataset_biogasStroomTj/2018'] !== null ? autolinker.link(feature.properties['complete_dataset_biogasStroomTj/2018'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
                 <th scope="row">complete_dataset_groenPercentage/2015</th>\
