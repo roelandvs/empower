@@ -142,19 +142,6 @@ aside:nth-of-type(2) > div:nth-of-type(2) span {
 	background-color: #fff;
 	margin: 40px;
 	padding: 10px 20px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-
-#legenda > div {
-	height: 20px;
-}
-
-#legenda h3 {
-	flex-basis: 100%;
-	margin-bottom: auto;
 }
 
 #legenda p {
@@ -164,24 +151,42 @@ aside:nth-of-type(2) > div:nth-of-type(2) span {
 	font-weight: 300;
 }
 
-#legenda > div:nth-of-type(2) .legenda-color {
+#legenda > p {
+	position: absolute;
+	margin: 13px 20px;
+	top: 0;
+	right: 0;
+}
+
+#legenda h3 {
+	margin-bottom: 10px;
+}
+
+.color-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: auto;
+}
+
+.color-container > div:nth-of-type(2) .legenda-color {
 	background-color: #baf0c7;
 }
 
-#legenda > div:nth-of-type(3) .legenda-color {
+.color-container > div:nth-of-type(3) .legenda-color {
 	background-color: #6ae684;
 }
 
-#legenda > div:nth-of-type(4) .legenda-color {
+.color-container > div:nth-of-type(4) .legenda-color {
 	background-color: #3add56;
 }
 
-#legenda > div:nth-of-type(5) .legenda-color {
+.color-container > div:nth-of-type(5) .legenda-color {
 	background-color: #38d440;
 }
 
-#legenda > div:nth-of-type(6) .legenda-color {
-	background-color: #35c43a;
+.color-container > div:nth-of-type(6) .legenda-color {
+	background-color: #30b035;
 }
 
 .legenda-color {

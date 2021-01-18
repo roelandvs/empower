@@ -110,7 +110,6 @@ function changeYear(jaarItem) {
 	//updates year
 	currentYear = jaar;
 	generateNewPath();
-	buildSidebarLeft();
 };
 
 function colorEnergyButton(buttonItem) {
@@ -124,11 +123,68 @@ function colorEnergyButton(buttonItem) {
 	buttonItem.classList.add('active-energy');
 };
 
+function switchEnergy() {
+	const legendaColor = document.querySelectorAll(".color-container > div .legenda-color");
+	const legendaTitle = document.querySelector("#legenda > p");
+	const legendaNumbers = document.querySelectorAll(".color-container > div p");
+
+	if (propertyValue === "groenPercentage/") {
+		legendaTitle.innerText = "Green energy percentage";
+		legendaColor[1].style.backgroundColor = "#baf0c7";
+		legendaColor[2].style.backgroundColor = "#6ae684";
+		legendaColor[3].style.backgroundColor = "#3add56";
+		legendaColor[4].style.backgroundColor = "#38d440";
+		legendaColor[5].style.backgroundColor = "#30b035";
+		legendaNumbers[1].innerText = "5%"
+		legendaNumbers[2].innerText = "15%"
+		legendaNumbers[3].innerText = "25%"
+		legendaNumbers[4].innerText = "35%"
+		legendaNumbers[5].innerText = "45%"
+	} else if (propertyValue === "windStroomTj/") {
+		legendaTitle.innerText = "Consumption in TJ";
+		legendaColor[1].style.backgroundColor = "#f3f9ff";
+		legendaColor[2].style.backgroundColor = "#e0f1fe";
+		legendaColor[3].style.backgroundColor = "#a7d8fc";
+		legendaColor[4].style.backgroundColor = "#37a0f8";
+		legendaColor[5].style.backgroundColor = "#1888f2";
+		legendaNumbers[1].innerText = "10"
+		legendaNumbers[2].innerText = "50"
+		legendaNumbers[3].innerText = "250"
+		legendaNumbers[4].innerText = "1250"
+		legendaNumbers[5].innerText = "2500"
+	} else if (propertyValue === "zonneStroomTj/") {
+		legendaTitle.innerText = "Consumption in TJ";
+		legendaColor[1].style.backgroundColor = "#f6f5e2";
+		legendaColor[2].style.backgroundColor = "#f9ec84";
+		legendaColor[3].style.backgroundColor = "#fce54e";
+		legendaColor[4].style.backgroundColor = "#ffab2c";
+		legendaColor[5].style.backgroundColor = "#ff9900";
+		legendaNumbers[1].innerText = "10"
+		legendaNumbers[2].innerText = "40"
+		legendaNumbers[3].innerText = "80"
+		legendaNumbers[4].innerText = "150"
+		legendaNumbers[5].innerText = "200"
+	} else if (propertyValue === "biogasStroomTj/") {
+		legendaTitle.innerText = "Consumption in TJ";
+		legendaColor[1].style.backgroundColor = "#FFF";
+		legendaColor[2].style.backgroundColor = "#95a1c1";
+		legendaColor[3].style.backgroundColor = "#46538f";
+		legendaColor[4].style.backgroundColor = "#314083";
+		legendaColor[5].style.backgroundColor = "#24337a";
+		legendaNumbers[1].innerText = "0"
+		legendaNumbers[2].innerText = "50"
+		legendaNumbers[3].innerText = "100"
+		legendaNumbers[4].innerText = "150"
+		legendaNumbers[5].innerText = "200"
+	}
+};
+
 function switchZonneEnergie() {
 	propertyValue = 'zonneStroomTj/';
 	popupEnergyType = 'Solar energy:';
     energySymbol = ' TJ';
 	generateNewPath();
+	switchEnergy();
 };
 
 function switchGroenPercentage() {
@@ -136,6 +192,7 @@ function switchGroenPercentage() {
 	popupEnergyType = 'Green energy:';
     energySymbol = '%';
 	generateNewPath();
+	switchEnergy();
 };
 
 function switchWindEnergie() {
@@ -143,6 +200,7 @@ function switchWindEnergie() {
 	popupEnergyType = 'Wind energy:';
     energySymbol = ' TJ';
 	generateNewPath();
+	switchEnergy();
 };
 
 function switchBiogasEnergie() {
@@ -150,6 +208,7 @@ function switchBiogasEnergie() {
 	popupEnergyType = 'Biogas power:';
     energySymbol = ' TJ';
 	generateNewPath();
+	switchEnergy();
 };
 
 function generateNewPath() {
