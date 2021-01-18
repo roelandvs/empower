@@ -29,8 +29,12 @@ h2 {
 }
 
 h3 {
-	font-size: 1.3em;
+	font-size: 1.1em;
 	color: #24337A;
+}
+
+table h3 {
+	font-size: 1.3em;
 }
 
 p {
@@ -49,7 +53,8 @@ td:nth-child(2) {
 	color: #24337A;
 }
 
-aside {
+aside,
+#legenda {
 	width: 250px;
 	z-index: 1100;
 	position: absolute;
@@ -71,14 +76,14 @@ aside:nth-of-type(1) {
 	transition: 0.8s all;
 }
 
-aside:nth-of-type(2) {
+aside:nth-of-type(2),
+#legenda {
 	width: 280px;
 	right: 0;
 	margin: 40px;
 	border-radius: 20px;
-	height: 470px;
 	padding: 10px;
-	background-color: rgba(249,249,249, 0.87);
+	background-color: rgba(247,247,247, 0.87);
 }
 
 aside:nth-of-type(2) h2 {
@@ -102,7 +107,6 @@ aside:nth-of-type(2) > div:nth-of-type(1) {
 aside:nth-of-type(2) > div:nth-of-type(2),
 .energy-container {
 	width: 100%;
-	height: 150px;
 	background-color: #fff;
 	border-radius: 10px;
 	box-shadow: 5px 5px 10px -4px rgba(0,0,0,0.1);
@@ -116,11 +120,59 @@ aside:nth-of-type(2) > div:nth-of-type(2) h3 {
 
 aside:nth-of-type(2) > div:nth-of-type(2) p {
 	margin-bottom: 7px;
+	font-size: 0.8em;
 	width: 100%;
+}
+
+aside:nth-of-type(2) > div:nth-of-type(2) p:nth-of-type(3) {
+	font-size: 0.9em;
+	font-weight: 600;
+	padding-top: 7px;
+	border-top: 1px solid #B3C5D7;
 }
 
 aside:nth-of-type(2) > div:nth-of-type(2) span {
 	float: right;
+}
+
+#legenda {
+	bottom: 0;
+	top: auto;
+	height: 80px;
+	background-color: #fff;
+	margin: 40px;
+	padding: 10px 20px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#legenda > div {
+	height: 20px;
+}
+
+#legenda h3 {
+	flex-basis: 100%;
+	margin-bottom: auto;
+}
+
+#legenda p {
+	font-size: 0.8em;
+	margin-top: 3px;
+	padding: 0 2px;
+	font-weight: 300;
+}
+
+#legenda > div:nth-of-type(6) .legenda-color {
+	background-color: #35c43a;
+}
+
+.legenda-color {
+	width: 30px;
+	height: 10px;
+	border-radius: 10px;
+	background-color: #ccc;
 }
 
 .energy-container {
@@ -215,17 +267,17 @@ aside:nth-of-type(2) > div:nth-of-type(2) span {
 }
 
 .year-selector p {
-	margin: 15px 2px;
+	margin: 10px 0px;
 	padding: 6px 10px;
 	opacity: 1;
 	border-radius: 50px;
-	width: 80px;
+	width: 70px;
 	text-align: center;
 	cursor: pointer;
 	transition: 0.5s all;
 }
 
-.year-selector h2 {
+.year-selector h3 {
 	color: #24337A;
 	margin-left: 10px;
 }

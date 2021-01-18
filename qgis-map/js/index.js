@@ -3,6 +3,7 @@ const buttonContainer = document.querySelector(".energy-buttons");
 const yearContainer = document.querySelector(".year-selector");
 const yearMenuItems = document.querySelectorAll(".year-selector > p");
 const energyItems = document.querySelectorAll(".energy-buttons > div > div");
+
 let leafletMapPane = "transform: translate3d(0px, 0px, 0px);";
 
 
@@ -19,7 +20,6 @@ function buildSidebarLeft(gemeente) {
 	const shapeClass = document.querySelector(".sidebar-gemeente");
 	const sidebarTitle = document.querySelector("aside:nth-of-type(1) h2");
 	const gemeenteNaam = document.getElementsByClassName("gemeente-titel");
-
 	const inwonersTekst = document.getElementById("population");
 	const oppervlakteTekst = document.getElementById("surface");
 	const bevDichtheidTekst = document.getElementById("density");
@@ -76,7 +76,6 @@ function buildSidebarRight() {
 	energyStats[1].innerText = windStats.replace(/,|\./g, '');
 	energyStats[2].innerText = biogasStats;
 	totaalVerbruik.innerText = totaalStats.replace(/,|\./g, '') + ' TJ';
-
 
 	if (+(totaalStats.replace(',', '')) - (+(windStats.replace(',', '')) + +biogasStats) + +zonneStats) {
 		energyStats[3].innerText = +(totaalStats.replace(/,|\./g, '')) - (+(windStats.replace(/,|\./g, '')) + +(biogasStats.replace(/,|\./g, '')) + +zonneStats);

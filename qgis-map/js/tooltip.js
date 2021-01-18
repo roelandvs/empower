@@ -59,10 +59,10 @@ function pop_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0(fea
                 <td colspan="2">' + (feature.properties['complete_dataset_percentageBewoond'] !== null ? autolinker.link(feature.properties['complete_dataset_percentageBewoond'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
-                <td colspan="2" id="electricity-s">' + (feature.properties['complete_dataset_gemElekVerbuikKwh'] !== null ? autolinker.link(feature.properties['complete_dataset_gemElekVerbuikKwh'].toLocaleString()) : '') + " kWh" + '</td>\
+                <td colspan="2" id="electricity-s">' + (feature.properties['complete_dataset_gemElekVerbuikKwh'] !== null ? autolinker.link(feature.properties['complete_dataset_gemElekVerbuikKwh'].toLocaleString()) : '') + " kWh (per house)" + '</td>\
             </tr>\
             <tr class="no-display">\
-                <td colspan="2" id="gas-s">' + (feature.properties['complete_dataset_gemAardgasVerbruikM3'] !== null ? autolinker.link(feature.properties['complete_dataset_gemAardgasVerbruikM3'].toLocaleString()) : '') + " m3" + '</td>\
+                <td colspan="2" id="gas-s">' + (feature.properties['complete_dataset_gemAardgasVerbruikM3'] !== null ? autolinker.link(feature.properties['complete_dataset_gemAardgasVerbruikM3'].toLocaleString()) : '') + " m3 (per house)" + '</td>\
             </tr>\
             <tr class="no-display">\
                 <td colspan="2" id="businesses-s">' + (feature.properties['complete_dataset_aantalBedrijfvestg'] !== null ? autolinker.link(feature.properties['complete_dataset_aantalBedrijfvestg'].toLocaleString()) : '') + " businesses" + '</td>\
