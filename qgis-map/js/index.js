@@ -3,14 +3,16 @@ const buttonContainer = document.querySelector(".energy-buttons");
 const yearContainer = document.querySelector(".year-selector");
 const yearMenuItems = document.querySelectorAll(".year-selector > p");
 const energyItems = document.querySelectorAll(".energy-buttons > div > div");
-const mapId = document.querySelector("#map");
-console.log(mapId.firstChild);
+let leafletMapPane = "transform: translate3d(0px, 0px, 0px);";
 
+
+//this function checks if the map is dragged or clicked
 function checkIfDrag(gemeente) {
-	if (mapLocatie == mapId.getBoundingClientRect()) {
+	if (leafletMapPane == document.getElementsByClassName('leaflet-map-pane')[0].attributes[1].value) {
 		buildSidebarLeft(gemeente);
-	}
-	mapLocatie = mapId.getBoundingClientRect();
+	};
+
+	leafletMapPane = document.getElementsByClassName('leaflet-map-pane')[0].attributes[1].value;
 }
 
 function buildSidebarLeft(gemeente) {	
@@ -29,7 +31,6 @@ function buildSidebarLeft(gemeente) {
 	const shapeValues = gemeente.getAttribute('d');
 	const xCoordinate = gemeente.getBBox().x;
 	const yCoordinate = gemeente.getBBox().y;
-	console.log(mapId)
 
 	buildSidebarRight();
 
@@ -70,7 +71,7 @@ function buildSidebarRight() {
 	const totaalVerbruik = document.getElementById('totaal-verbruik-' + currentYear).innerText;
 
 	energyStats[0].innerText = zonneStats;
-	energyStats[1].innerText = windStats;
+	energyStats[1].innerText = windStats.replace(/,|\./g, '');
 	energyStats[2].innerText = biogasStats;
 
 	if (+(totaalVerbruik.replace(',', '')) - (+(windStats.replace(',', '')) + +biogasStats) + +zonneStats) {
@@ -78,12 +79,6 @@ function buildSidebarRight() {
 	} else {
 		energyStats[3].innerText = '-'
 	}
-
-	console.log('zon', +zonneStats);
-	console.log('wind', +(windStats.replace(/,|\./g, '')));
-	console.log('biogas', +(biogasStats.replace(/,|\./g, '')));
-	console.log('totaal-verbruik', +(totaalVerbruik.replace(/,|\./g, '')));
-	console.log('totaal groen', (+(windStats.replace(/,|\./g, '')) + +(biogasStats.replace(/,|\./g, '')) + +zonneStats));
 
 	sidebarTitle.innerText = gemeenteNaam[0].innerText;
 };

@@ -142,6 +142,10 @@ aside:nth-of-type(2) > div:nth-of-type(2) span {
 	margin: auto 6px auto 0;
 }
 
+.energy-container img:nth-of-type(3) {
+	fill: #ccc;
+}
+
 .energy-container p {
 	font-size: 1.2em;
 	font-weight: 300;
