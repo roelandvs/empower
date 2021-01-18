@@ -36,8 +36,6 @@ function buildSidebarLeft(gemeente) {
 	const xCoordinate = gemeente.getBBox().x;
 	const yCoordinate = gemeente.getBBox().y;
 
-	buildSidebarRight();
-
 	//fills all the text of the sidebar with info
 	sidebarTitle.innerText = gemeenteNaam[0].innerText;
 	inwonersTekst.innerText = document.getElementById('population-s').innerText;
@@ -53,6 +51,7 @@ function buildSidebarLeft(gemeente) {
 	shapeClass.setAttribute('d', shapeValues);
 	buttonContainer.style.left = '240px';
 	yearContainer.style.left = '240px';
+	document.querySelector('aside:nth-of-type(2)').style.right = '0px';
 	initiativeSidebar.style.left = '0';
 
 	//places the gemeente svg/path on point 0,0
@@ -63,10 +62,13 @@ function buildSidebarLeft(gemeente) {
 	} else {
 		shapeClass.style.transform = "translate(" + "-" + xCoordinate + "px, -" + yCoordinate + "px)";
 	}
+
+	buildSidebarRight();
 };
 
 function buildSidebarRight() {
-	const sidebarTitle = document.querySelector("aside:nth-of-type(2) h2");
+	const sidebarTitle = document.querySelector("aside:nth-of-type(2) h2 span:nth-of-type(1)");
+	const sidebarJaar = document.querySelector("aside:nth-of-type(2) h2 span:nth-of-type(2)");
 	const gemeenteNaam = document.getElementsByClassName("gemeente-titel");
 	const energyStats = document.querySelectorAll(".energy-container span");
 	const totaalVerbruik = document.getElementById("totaal-verbruik");
@@ -80,6 +82,7 @@ function buildSidebarRight() {
 	energyStats[1].innerText = windStats.replace(/,|\./g, '');
 	energyStats[2].innerText = biogasStats;
 	totaalVerbruik.innerText = totaalStats.replace(/,|\./g, '') + ' TJ';
+	sidebarJaar.innerText = '  ' + currentYear;
 
 	if (+(totaalStats.replace(',', '')) - (+(windStats.replace(',', '')) + +biogasStats) + +zonneStats) {
 		energyStats[3].innerText = +(totaalStats.replace(/,|\./g, '')) - (+(windStats.replace(/,|\./g, '')) + +(biogasStats.replace(/,|\./g, '')) + +zonneStats);
@@ -92,6 +95,7 @@ function moveSidebar() {
 	initiativeSidebar.style.left = '-300px';
 	buttonContainer.style.left = '0';
 	yearContainer.style.left = '0';
+	document.querySelector('aside:nth-of-type(2)').style.right = '-350px';
 };
 
 function changeYear(jaarItem) {
@@ -139,7 +143,7 @@ function switchEnergy() {
 		legendaNumbers[2].innerText = "15%"
 		legendaNumbers[3].innerText = "25%"
 		legendaNumbers[4].innerText = "35%"
-		legendaNumbers[5].innerText = "45%"
+		legendaNumbers[5].innerText = ">45%"
 	} else if (propertyValue === "windStroomTj/") {
 		legendaTitle.innerText = "Consumption in TJ";
 		legendaColor[1].style.backgroundColor = "#f3f9ff";
