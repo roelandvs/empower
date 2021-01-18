@@ -74,7 +74,7 @@ function buildSidebarRight() {
 	energyStats[2].innerText = biogasStats;
 
 	if (+(totaalVerbruik.replace(',', '')) - (+(windStats.replace(',', '')) + +biogasStats) + +zonneStats) {
-		energyStats[3].innerText = +(totaalVerbruik.replace(',', '')) - (+(windStats.replace(',', '')) + +biogasStats + +zonneStats);
+		energyStats[3].innerText = +totaalVerbruik - (+windStats + +biogasStats + +zonneStats);
 	} else {
 		energyStats[3].innerText = '-'
 	}
