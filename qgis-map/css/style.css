@@ -164,6 +164,22 @@ aside:nth-of-type(2) > div:nth-of-type(2) span {
 	font-weight: 300;
 }
 
+#legenda > div:nth-of-type(2) .legenda-color {
+	background-color: #baf0c7;
+}
+
+#legenda > div:nth-of-type(3) .legenda-color {
+	background-color: #6ae684;
+}
+
+#legenda > div:nth-of-type(4) .legenda-color {
+	background-color: #3add56;
+}
+
+#legenda > div:nth-of-type(5) .legenda-color {
+	background-color: #38d440;
+}
+
 #legenda > div:nth-of-type(6) .legenda-color {
 	background-color: #35c43a;
 }

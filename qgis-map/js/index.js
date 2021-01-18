@@ -7,8 +7,12 @@ const energyItems = document.querySelectorAll(".energy-buttons > div > div");
 let leafletMapPane = "transform: translate3d(0px, 0px, 0px);";
 
 
+function checkIfDragOne() {
+	leafletMapPane = document.getElementsByClassName('leaflet-map-pane')[0].attributes[1].value;
+}
+
 //this function checks if the map is dragged or clicked
-function checkIfDrag(gemeente) {
+function checkIfDragTwo(gemeente) {
 	if (leafletMapPane == document.getElementsByClassName('leaflet-map-pane')[0].attributes[1].value) {
 		buildSidebarLeft(gemeente);
 	};
