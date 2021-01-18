@@ -74,16 +74,16 @@ function buildSidebarRight() {
 	energyStats[2].innerText = biogasStats;
 
 	if (+(totaalVerbruik.replace(',', '')) - (+(windStats.replace(',', '')) + +biogasStats) + +zonneStats) {
-		energyStats[3].innerText = +(totaalVerbruik.replace(',', '')) - (+(windStats.replace(',', '')) + +(biogasStats.replace(',', '')) + +zonneStats);
+		energyStats[3].innerText = +(totaalVerbruik.replace(/,|\./g, '')) - (+(windStats.replace(/,|\./g, '')) + +(biogasStats.replace(/,|\./g, '')) + +zonneStats);
 	} else {
 		energyStats[3].innerText = '-'
 	}
 
 	console.log('zon', +zonneStats);
-	console.log('wind', +(windStats.replace(',', '')));
-	console.log('biogas', +(biogasStats.replace(',', '')));
-	console.log('totaal-verbruik', +(totaalVerbruik.replace(',', '')));
-	console.log('totaal groen', (+(windStats.replace(',', '')) + +(biogasStats.replace(',', '')) + +zonneStats));
+	console.log('wind', +(windStats.replace(/,|\./g, '')));
+	console.log('biogas', +(biogasStats.replace(/,|\./g, '')));
+	console.log('totaal-verbruik', +(totaalVerbruik.replace(/,|\./g, '')));
+	console.log('totaal groen', (+(windStats.replace(/,|\./g, '')) + +(biogasStats.replace(/,|\./g, '')) + +zonneStats));
 
 	sidebarTitle.innerText = gemeenteNaam[0].innerText;
 };
