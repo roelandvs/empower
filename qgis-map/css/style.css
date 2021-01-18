@@ -174,7 +174,6 @@ aside:nth-of-type(2) > div:nth-of-type(2) span {
 
 .empower:hover {
 	stroke-width: 3;
-	filter: brightness(1.5);
 }
 
 #sidebar-away {
