@@ -123,31 +123,31 @@ function pop_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0(fea
             </tr>\
             <tr class="no-display">\
                 <th scope="row">complete_dataset_groenPercentage/2015</th>\
-                <td>' + (feature.properties['complete_dataset_groenPercentage/2015'] !== null ? autolinker.link(feature.properties['complete_dataset_groenPercentage/2015'].toLocaleString()) : '') + '</td>\
+                <td id="groen-energie-2015">' + (feature.properties['complete_dataset_groenPercentage/2015'] !== null ? autolinker.link(feature.properties['complete_dataset_groenPercentage/2015'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
                 <th scope="row">complete_dataset_groenPercentage/2016</th>\
-                <td>' + (feature.properties['complete_dataset_groenPercentage/2016'] !== null ? autolinker.link(feature.properties['complete_dataset_groenPercentage/2016'].toLocaleString()) : '') + '</td>\
+                <td id="groen-energie-2016">' + (feature.properties['complete_dataset_groenPercentage/2016'] !== null ? autolinker.link(feature.properties['complete_dataset_groenPercentage/2016'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
                 <th scope="row">complete_dataset_groenPercentage/2017</th>\
-                <td>' + (feature.properties['complete_dataset_groenPercentage/2017'] !== null ? autolinker.link(feature.properties['complete_dataset_groenPercentage/2017'].toLocaleString()) : '') + '</td>\
+                <td id="groen-energie-2017">' + (feature.properties['complete_dataset_groenPercentage/2017'] !== null ? autolinker.link(feature.properties['complete_dataset_groenPercentage/2017'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
                 <th scope="row">complete_dataset_groenPercentage/2018</th>\
-                <td>' + (feature.properties['complete_dataset_groenPercentage/2018'] !== null ? autolinker.link(feature.properties['complete_dataset_groenPercentage/2018'].toLocaleString()) : '') + '</td>\
+                <td id="groen-energie-2018">' + (feature.properties['complete_dataset_groenPercentage/2018'] !== null ? autolinker.link(feature.properties['complete_dataset_groenPercentage/2018'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
-                <td colspan="2">' + (feature.properties['complete_dataset_totaalEnergieGebruik/2015'] !== null ? autolinker.link(feature.properties['complete_dataset_totaalEnergieGebruik/2015'].toLocaleString()) : '') + '</td>\
+                <td id="totaal-verbruik-2015" colspan="2">' + (feature.properties['complete_dataset_totaalEnergieGebruik/2015'] !== null ? autolinker.link(feature.properties['complete_dataset_totaalEnergieGebruik/2015'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
-                <td colspan="2">' + (feature.properties['complete_dataset_totaalEnergieGebruik/2016'] !== null ? autolinker.link(feature.properties['complete_dataset_totaalEnergieGebruik/2016'].toLocaleString()) : '') + '</td>\
+                <td id="totaal-verbruik-2016" colspan="2">' + (feature.properties['complete_dataset_totaalEnergieGebruik/2016'] !== null ? autolinker.link(feature.properties['complete_dataset_totaalEnergieGebruik/2016'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
-                <td colspan="2">' + (feature.properties['complete_dataset_totaalEnergieGebruik/2017'] !== null ? autolinker.link(feature.properties['complete_dataset_totaalEnergieGebruik/2017'].toLocaleString()) : '') + '</td>\
+                <td id="totaal-verbruik-2017" colspan="2">' + (feature.properties['complete_dataset_totaalEnergieGebruik/2017'] !== null ? autolinker.link(feature.properties['complete_dataset_totaalEnergieGebruik/2017'].toLocaleString()) : '') + '</td>\
             </tr>\
             <tr class="no-display">\
-                <td colspan="2">' + (feature.properties['complete_dataset_totaalEnergieGebruik/2018'] !== null ? autolinker.link(feature.properties['complete_dataset_totaalEnergieGebruik/2018'].toLocaleString()) : '') + '</td>\
+                <td id="totaal-verbruik-2018" colspan="2">' + (feature.properties['complete_dataset_totaalEnergieGebruik/2018'] !== null ? autolinker.link(feature.properties['complete_dataset_totaalEnergieGebruik/2018'].toLocaleString()) : '') + '</td>\
             </tr>\
         </table>';
     layer.bindPopup(popupContent, {maxHeight: 400});

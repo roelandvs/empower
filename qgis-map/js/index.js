@@ -2,11 +2,18 @@ const initiativeSidebar = document.querySelector("aside");
 const buttonContainer = document.querySelector(".energy-buttons");
 const yearContainer = document.querySelector(".year-selector");
 const yearMenuItems = document.querySelectorAll(".year-selector > p");
-// const energyButtons = document.getElementsByClassName("round-button");
 const energyItems = document.querySelectorAll(".energy-buttons > div > div");
-const gemeentes = Array.from(document.getElementsByClassName("empower"));
+const mapId = document.querySelector("#map");
+console.log(mapId.firstChild);
 
-function buildSidebarLeft(gemeente) {
+function checkIfDrag(gemeente) {
+	if (mapLocatie == mapId.getBoundingClientRect()) {
+		buildSidebarLeft(gemeente);
+	}
+	mapLocatie = mapId.getBoundingClientRect();
+}
+
+function buildSidebarLeft(gemeente) {	
 	const shapeClass = document.querySelector(".sidebar-gemeente");
 	const sidebarTitle = document.querySelector("aside:nth-of-type(1) h2");
 	const gemeenteNaam = document.getElementsByClassName("gemeente-titel");
@@ -22,6 +29,7 @@ function buildSidebarLeft(gemeente) {
 	const shapeValues = gemeente.getAttribute('d');
 	const xCoordinate = gemeente.getBBox().x;
 	const yCoordinate = gemeente.getBBox().y;
+	console.log(mapId)
 
 	buildSidebarRight();
 
@@ -56,13 +64,22 @@ function buildSidebarRight() {
 	const sidebarTitle = document.querySelector("aside:nth-of-type(2) h2");
 	const gemeenteNaam = document.getElementsByClassName("gemeente-titel");
 	const energyStats = document.querySelectorAll(".energy-container span");
+	const zonneStats = document.getElementById('zonnestroom-' + currentYear).innerText;
+	const windStats = document.getElementById('windstroom-' + currentYear).innerText;
+	const biogasStats = document.getElementById('biogasstroom-' + currentYear).innerText;
+	const totaalVerbruik = document.getElementById('totaal-verbruik-' + currentYear).innerText;
 
-	energyStats[0].innerText = document.getElementById('zonnestroom-' + currentYear).innerText;
-	energyStats[1].innerText = document.getElementById('windstroom-' + currentYear).innerText;
-	energyStats[2].innerText = document.getElementById('biogasstroom-' + currentYear).innerText;
+	energyStats[0].innerText = zonneStats;
+	energyStats[1].innerText = windStats;
+	energyStats[2].innerText = biogasStats;
+
+	if (+(totaalVerbruik.replace(',', '')) - (+(windStats.replace(',', '')) + +biogasStats) + +zonneStats) {
+		energyStats[3].innerText = +(totaalVerbruik.replace(',', '')) - (+(windStats.replace(',', '')) + +biogasStats) + +zonneStats;
+	} else {
+		energyStats[3].innerText = '-'
+	}
 
 	sidebarTitle.innerText = gemeenteNaam[0].innerText;
-
 };
 
 function moveSidebar() {
@@ -87,6 +104,7 @@ function changeYear(jaarItem) {
 	//updates year
 	currentYear = jaar;
 	generateNewPath();
+	buildSidebarLeft();
 };
 
 function colorEnergyButton(buttonItem) {

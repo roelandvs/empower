@@ -3201,7 +3201,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(50,177,70,1.0)',
+                fillColor: 'rgba(204,204,204,1.0)',
                 interactive: true,
             }
                     break;
