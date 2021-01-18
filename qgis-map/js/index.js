@@ -74,10 +74,16 @@ function buildSidebarRight() {
 	energyStats[2].innerText = biogasStats;
 
 	if (+(totaalVerbruik.replace(',', '')) - (+(windStats.replace(',', '')) + +biogasStats) + +zonneStats) {
-		energyStats[3].innerText = +totaalVerbruik - (+windStats + +biogasStats + +zonneStats);
+		energyStats[3].innerText = +(totaalVerbruik.replace(',', '')) - (+(windStats.replace(',', '')) + +(biogasStats.replace(',', '')) + +zonneStats);
 	} else {
 		energyStats[3].innerText = '-'
 	}
+
+	console.log('zon', +zonneStats);
+	console.log('wind', +(windStats.replace(',', '')));
+	console.log('biogas', +(biogasStats.replace(',', '')));
+	console.log('totaal-verbruik', +(totaalVerbruik.replace(',', '')));
+	console.log('totaal groen', (+(windStats.replace(',', '')) + +(biogasStats.replace(',', '')) + +zonneStats));
 
 	sidebarTitle.innerText = gemeenteNaam[0].innerText;
 };
