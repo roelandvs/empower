@@ -77,18 +77,15 @@ function buildSidebarRight() {
 	const biogasStats = document.getElementById('biogasstroom-' + currentYear).innerText;
 	const totaalStats = document.getElementById('totaal-verbruik-' + currentYear).innerText;
 
-	// if (propertyValue === "groenPercentage/") {
-		energyStats[0].innerText = zonneStats;
-		energyStats[1].innerText = windStats.replace(/,|\./g, '');
-		energyStats[2].innerText = biogasStats;
+	energyStats[0].innerText = zonneStats;
+	energyStats[1].innerText = windStats.replace(/,|\./g, '');
+	energyStats[2].innerText = biogasStats;
 
-		if (+(totaalStats.replace(',', '')) - (+(windStats.replace(',', '')) + +biogasStats) + +zonneStats) {
-			energyStats[3].innerText = +(totaalStats.replace(/,|\./g, '')) - (+(windStats.replace(/,|\./g, '')) + +(biogasStats.replace(/,|\./g, '')) + +zonneStats);
-		} else {
-			energyStats[3].innerText = '-';
-		}
-	// } else {
-	// }
+	if (+(totaalStats.replace(',', '')) - (+(windStats.replace(',', '')) + +biogasStats) + +zonneStats) {
+		energyStats[3].innerText = +(totaalStats.replace(/,|\./g, '')) - (+(windStats.replace(/,|\./g, '')) + +(biogasStats.replace(/,|\./g, '')) + +zonneStats);
+	} else {
+		energyStats[3].innerText = '-';
+	}
 
 	sidebarTitle.innerText = gemeenteNaam[0].innerText;
 	totaalVerbruik.innerText = totaalStats.replace(/,|\./g, '') + ' TJ';
@@ -141,10 +138,31 @@ function createGraph(gemeenteNaam) {
 		yAxis[4].innerText = '0%';
 	}
 
+	// if (value2015 != '-') {
 	barPoints[0].style.marginBottom = (value2015 / maxValue) * chartHeight - 3 + 'px';
+	// 	barPoints[0].style.opacity = '0';
+	// } else {
+	// 	barPoints[0].style.opacity = '0';
+	// }
 	barPoints[1].style.marginBottom = (value2016 / maxValue) * chartHeight - 3 + 'px';
 	barPoints[2].style.marginBottom = (value2017 / maxValue) * chartHeight - 3 + 'px';
 	barPoints[3].style.marginBottom = (value2018 / maxValue) * chartHeight - 3 + 'px';
+
+	createLines(barPoints);
+};
+
+function createLines(barPoints) {
+	const svgItem = document.getElementById('svg-overlay');
+	const svgPath = document.querySelectorAll('#svg-overlay line');
+
+	svgPath[0].setAttribute('y1', (-42 + barPoints[0].offsetTop));
+	svgPath[0].setAttribute('y2', (-42 + barPoints[1].offsetTop));
+
+	svgPath[1].setAttribute('y1', (-42 + barPoints[1].offsetTop));
+	svgPath[1].setAttribute('y2', (-42 + barPoints[2].offsetTop));
+
+	svgPath[2].setAttribute('y1', (-42 + barPoints[2].offsetTop));
+	svgPath[2].setAttribute('y2', (-42 + barPoints[3].offsetTop));
 };
 
 function moveSidebar() {
