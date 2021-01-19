@@ -3,8 +3,7 @@ const buttonContainer = document.querySelector(".energy-buttons");
 const yearContainer = document.querySelector(".year-selector");
 const yearMenuItems = document.querySelectorAll(".year-selector > p");
 const energyItems = document.querySelectorAll(".energy-buttons > div > div");
-
-let leafletMapPane = "transform: translate3d(0px, 0px, 0px);";
+let leafletMapPane;
 
 
 function checkIfDragOne() {
@@ -77,19 +76,28 @@ function buildSidebarRight() {
 	const biogasStats = document.getElementById('biogasstroom-' + currentYear).innerText;
 	const totaalStats = document.getElementById('totaal-verbruik-' + currentYear).innerText;
 
+	if (propertyValue === "groenPercentage/") {
+		energyStats[0].innerText = zonneStats;
+		energyStats[1].innerText = windStats.replace(/,|\./g, '');
+		energyStats[2].innerText = biogasStats;
+
+		if (+(totaalStats.replace(',', '')) - (+(windStats.replace(',', '')) + +biogasStats) + +zonneStats) {
+			energyStats[3].innerText = +(totaalStats.replace(/,|\./g, '')) - (+(windStats.replace(/,|\./g, '')) + +(biogasStats.replace(/,|\./g, '')) + +zonneStats);
+		} else {
+			energyStats[3].innerText = '-';
+		}
+	} else {
+		// createBarChart();
+	}
+
 	sidebarTitle.innerText = gemeenteNaam[0].innerText;
-	energyStats[0].innerText = zonneStats;
-	energyStats[1].innerText = windStats.replace(/,|\./g, '');
-	energyStats[2].innerText = biogasStats;
 	totaalVerbruik.innerText = totaalStats.replace(/,|\./g, '') + ' TJ';
 	sidebarJaar.innerText = '  ' + currentYear;
-
-	if (+(totaalStats.replace(',', '')) - (+(windStats.replace(',', '')) + +biogasStats) + +zonneStats) {
-		energyStats[3].innerText = +(totaalStats.replace(/,|\./g, '')) - (+(windStats.replace(/,|\./g, '')) + +(biogasStats.replace(/,|\./g, '')) + +zonneStats);
-	} else {
-		energyStats[3].innerText = '-'
-	}
 };
+
+// function createBarChart() {
+
+// };
 
 function moveSidebar() {
 	initiativeSidebar.style.left = '-300px';

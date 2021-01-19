@@ -87,7 +87,8 @@ aside:nth-of-type(2),
 }
 
 aside:nth-of-type(2) {
-	right: -350px;
+	/*right: -350px;*/
+	right: 0px;
 	transition: 0.8s all;
 }
 
@@ -102,7 +103,6 @@ aside:nth-of-type(2) h2 {
 	box-shadow: 5px 5px 10px -4px rgba(0,0,0,0.1);
 }
 
-
 aside:nth-of-type(2) h2 span:nth-child(2) {
 	font-weight: 300;
 	font-size: 0.8em;
@@ -115,7 +115,57 @@ aside:nth-of-type(2) > div:nth-of-type(1) {
 	margin-bottom: 5px;
 }
 
+aside:nth-of-type(2) > div:nth-of-type(2) {
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#year-progression {
+	width: 80%;
+	height: 90px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	/*fill: blue;*/
+	background-color: #F4F4F4;
+	border-bottom: 2px solid #515151;
+	border-right: 2px solid #515151;
+}
+
+#year-progression > div {
+	width: 8px;
+	height: 8px;
+	margin-top: auto;
+	border-radius: 10px;
+	background-color: #6A67F6;
+}
+
+#x-axis {
+	display: flex;
+	width: 80%;
+	flex-direction: row;
+	justify-content: space-around;
+	font-size: 0.8em;
+	padding: 4px 0;
+	margin-bottom: auto;
+}
+
+#y-axis {
+	float: right;
+	width: 20%;
+	height: 90px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	/*background-color: #ccc;*/
+	font-size: 0.8em;
+	padding-left: 4px;
+}
+
 aside:nth-of-type(2) > div:nth-of-type(2),
+aside:nth-of-type(2) > div:nth-last-of-type(1),
 .energy-container {
 	width: 100%;
 	background-color: #fff;
@@ -124,25 +174,25 @@ aside:nth-of-type(2) > div:nth-of-type(2),
 	padding: 10px;
 }
 
-aside:nth-of-type(2) > div:nth-of-type(2) h3 {
+aside:nth-of-type(2) > div h3 {
 	font-size: 1em;
 	margin-bottom: 15px;
 }
 
-aside:nth-of-type(2) > div:nth-of-type(2) p {
+aside:nth-of-type(2) > div:nth-last-of-type(1) p {
 	margin-bottom: 7px;
 	font-size: 0.8em;
 	width: 100%;
 }
 
-aside:nth-of-type(2) > div:nth-of-type(2) p:nth-of-type(3) {
+aside:nth-of-type(2) > div:nth-last-of-type(1) p:nth-of-type(3) {
 	font-size: 0.9em;
 	font-weight: 600;
 	padding-top: 7px;
 	border-top: 1px solid #B3C5D7;
 }
 
-aside:nth-of-type(2) > div:nth-of-type(2) span {
+aside:nth-of-type(2) > div:nth-last-of-type(1) span {
 	float: right;
 }
 
@@ -512,5 +562,10 @@ aside:nth-of-type(2) > div:nth-of-type(2) span {
 }
 
 .no-display {
+	display: none;
+}
+
+/*Id because it needs to overwrite the display of item itself*/
+#display-none {
 	display: none;
 }
