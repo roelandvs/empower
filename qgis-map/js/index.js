@@ -77,7 +77,7 @@ function buildSidebarRight() {
 	const biogasStats = document.getElementById('biogasstroom-' + currentYear).innerText;
 	const totaalStats = document.getElementById('totaal-verbruik-' + currentYear).innerText;
 
-	if (propertyValue === "groenPercentage/") {
+	// if (propertyValue === "groenPercentage/") {
 		energyStats[0].innerText = zonneStats;
 		energyStats[1].innerText = windStats.replace(/,|\./g, '');
 		energyStats[2].innerText = biogasStats;
@@ -87,8 +87,8 @@ function buildSidebarRight() {
 		} else {
 			energyStats[3].innerText = '-';
 		}
-	} else {
-	}
+	// } else {
+	// }
 
 	sidebarTitle.innerText = gemeenteNaam[0].innerText;
 	totaalVerbruik.innerText = totaalStats.replace(/,|\./g, '') + ' TJ';
@@ -102,20 +102,49 @@ function createGraph(gemeenteNaam) {
 	const value2017 = currentGemeente.properties['complete_dataset_' + propertyValue + '2017'];
 	const value2018 = currentGemeente.properties['complete_dataset_' + propertyValue + '2018'];
 	const barPoints = document.querySelectorAll('#year-progression > div');
+	const energyTitle = document.querySelector('aside:nth-of-type(2) > div:nth-of-type(2) h3');
+	const yAxis = document.querySelectorAll('#y-axis p');
 	const chartHeight = 90;
 	let maxValue;
 
-	if (propertyValue === "zonneStroomTj/") {
-		maxValue = 200;
+	if (propertyValue === "groenPercentage/") {
+		maxValue = 100;
+		energyTitle.innerText = "Green energy";
+		yAxis[0].innerText = '100%';
+		yAxis[1].innerText = '75%';
+		yAxis[2].innerText = '50%';
+		yAxis[3].innerText = '25%';
+		yAxis[4].innerText = '0%';
+	} else if (propertyValue === "zonneStroomTj/") {
+		maxValue = 209;
+		energyTitle.innerText = "Solar energy";
+		yAxis[0].innerText = '200 TJ';
+		yAxis[1].innerText = '150 TJ';
+		yAxis[2].innerText = '100 TJ';
+		yAxis[3].innerText = '50 TJ';
+		yAxis[4].innerText = '0 TJ';
+	} else if (propertyValue === "windStroomTj/") {
+		maxValue = 3500;
+		energyTitle.innerText = "Wind energy";
+		yAxis[0].innerText = '100%';
+		yAxis[1].innerText = '75%';
+		yAxis[2].innerText = '50%';
+		yAxis[3].innerText = '25%';
+		yAxis[4].innerText = '0%';
+	} else if (propertyValue === "biogasStroomTj/") {
+		maxValue = 250;
+		energyTitle.innerText = "Biogas energy";
+		yAxis[0].innerText = '100%';
+		yAxis[1].innerText = '75%';
+		yAxis[2].innerText = '50%';
+		yAxis[3].innerText = '25%';
+		yAxis[4].innerText = '0%';
 	}
 
-	barPoints[0].style.marginBottom = (value2015 / maxValue) * chartHeight + 'px';
-	barPoints[1].style.marginBottom = (value2016 / maxValue) * chartHeight + 'px';
-	barPoints[2].style.marginBottom = (value2017 / maxValue) * chartHeight + 'px';
-	barPoints[3].style.marginBottom = (value2018 / maxValue) * chartHeight + 'px';
-
-
-	console.log(value2015)
+	barPoints[0].style.marginBottom = (value2015 / maxValue) * chartHeight - 3 + 'px';
+	barPoints[1].style.marginBottom = (value2016 / maxValue) * chartHeight - 3 + 'px';
+	barPoints[2].style.marginBottom = (value2017 / maxValue) * chartHeight - 3 + 'px';
+	barPoints[3].style.marginBottom = (value2018 / maxValue) * chartHeight - 3 + 'px';
 };
 
 function moveSidebar() {
