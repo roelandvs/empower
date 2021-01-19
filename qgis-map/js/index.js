@@ -63,6 +63,7 @@ function buildSidebarLeft(gemeente) {
 	}
 
 	buildSidebarRight();
+	createGraph(gemeenteNaam[0].innerText);
 };
 
 function buildSidebarRight() {
@@ -87,7 +88,6 @@ function buildSidebarRight() {
 			energyStats[3].innerText = '-';
 		}
 	} else {
-		// createBarChart();
 	}
 
 	sidebarTitle.innerText = gemeenteNaam[0].innerText;
@@ -95,9 +95,28 @@ function buildSidebarRight() {
 	sidebarJaar.innerText = '  ' + currentYear;
 };
 
-// function createBarChart() {
+function createGraph(gemeenteNaam) {
+	const currentGemeente = datasetArray.find(item => item.properties.Gemeentena === gemeenteNaam);
+	const value2015 = currentGemeente.properties['complete_dataset_' + propertyValue + '2015'];
+	const value2016 = currentGemeente.properties['complete_dataset_' + propertyValue + '2016'];
+	const value2017 = currentGemeente.properties['complete_dataset_' + propertyValue + '2017'];
+	const value2018 = currentGemeente.properties['complete_dataset_' + propertyValue + '2018'];
+	const barPoints = document.querySelectorAll('#year-progression > div');
+	const chartHeight = 90;
+	let maxValue;
 
-// };
+	if (propertyValue === "zonneStroomTj/") {
+		maxValue = 200;
+	}
+
+	barPoints[0].style.marginBottom = (value2015 / maxValue) * chartHeight + 'px';
+	barPoints[1].style.marginBottom = (value2016 / maxValue) * chartHeight + 'px';
+	barPoints[2].style.marginBottom = (value2017 / maxValue) * chartHeight + 'px';
+	barPoints[3].style.marginBottom = (value2018 / maxValue) * chartHeight + 'px';
+
+
+	console.log(value2015)
+};
 
 function moveSidebar() {
 	initiativeSidebar.style.left = '-300px';
