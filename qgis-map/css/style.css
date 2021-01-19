@@ -87,9 +87,9 @@ aside:nth-of-type(2),
 }
 
 aside:nth-of-type(2) {
-	/*right: -350px;*/
+	right: -350px;
 	margin-top: 30px;
-	right: 0px;
+	/*right: 0px;*/
 	transition: 0.8s all;
 }
 
@@ -113,7 +113,6 @@ aside:nth-of-type(2) > div:nth-of-type(1) {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin-bottom: 5px;
 }
 
 aside:nth-of-type(2) > div:nth-of-type(2) {
@@ -129,8 +128,6 @@ aside:nth-of-type(2) > div:nth-of-type(2) {
 	width: 74%;
 	top: 44px;
 	height: 90px;
-	/*background-color: blue;*/
-	border: 1px solid grey;
 }
 
 #svg-overlay line {

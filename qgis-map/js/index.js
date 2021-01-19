@@ -131,19 +131,24 @@ function createGraph(gemeenteNaam) {
 	} else if (propertyValue === "biogasStroomTj/") {
 		maxValue = 250;
 		energyTitle.innerText = "Biogas energy";
-		yAxis[0].innerText = '100%';
-		yAxis[1].innerText = '75%';
-		yAxis[2].innerText = '50%';
-		yAxis[3].innerText = '25%';
-		yAxis[4].innerText = '0%';
+		yAxis[0].innerText = '260 TJ';
+		yAxis[1].innerText = '195 TJ';
+		yAxis[2].innerText = '130 TJ';
+		yAxis[3].innerText = '65 TJ';
+		yAxis[4].innerText = '0 TJ';
 	}
 
-	// if (value2015 != '-') {
+	// barPoints.forEach(item => {
+	// 	if (value2015 != '-') {
+	// 		item.style.marginBottom = (value2015 / maxValue) * chartHeight - 3 + 'px';
+	// 		barPoints[0].style.opacity = '1';
+	// 	} else {
+	// 		barPoints[0].style.opacity = '0';
+	// 	}
+	// })
+
+
 	barPoints[0].style.marginBottom = (value2015 / maxValue) * chartHeight - 3 + 'px';
-	// 	barPoints[0].style.opacity = '0';
-	// } else {
-	// 	barPoints[0].style.opacity = '0';
-	// }
 	barPoints[1].style.marginBottom = (value2016 / maxValue) * chartHeight - 3 + 'px';
 	barPoints[2].style.marginBottom = (value2017 / maxValue) * chartHeight - 3 + 'px';
 	barPoints[3].style.marginBottom = (value2018 / maxValue) * chartHeight - 3 + 'px';
@@ -155,14 +160,10 @@ function createLines(barPoints) {
 	const svgItem = document.getElementById('svg-overlay');
 	const svgPath = document.querySelectorAll('#svg-overlay line');
 
-	svgPath[0].setAttribute('y1', (-42 + barPoints[0].offsetTop));
-	svgPath[0].setAttribute('y2', (-42 + barPoints[1].offsetTop));
-
-	svgPath[1].setAttribute('y1', (-42 + barPoints[1].offsetTop));
-	svgPath[1].setAttribute('y2', (-42 + barPoints[2].offsetTop));
-
-	svgPath[2].setAttribute('y1', (-42 + barPoints[2].offsetTop));
-	svgPath[2].setAttribute('y2', (-42 + barPoints[3].offsetTop));
+	for (let i = 0; i < svgPath.length; i++) {
+		svgPath[i].setAttribute('y1', (-41 + barPoints[i].offsetTop));
+		svgPath[i].setAttribute('y2', (-41 + barPoints[i + 1].offsetTop));
+	};
 };
 
 function moveSidebar() {
