@@ -5,7 +5,6 @@ const yearMenuItems = document.querySelectorAll(".year-selector > p");
 const energyItems = document.querySelectorAll(".energy-buttons > div > div");
 let leafletMapPane;
 
-
 function checkIfDragOne() {
 	leafletMapPane = document.getElementsByClassName('leaflet-map-pane')[0].attributes[1].value;
 }
@@ -94,10 +93,6 @@ function buildSidebarRight() {
 
 function createGraph(gemeenteNaam) {
 	const currentGemeente = datasetArray.find(item => item.properties.Gemeentena === gemeenteNaam);
-	// const value2015 = currentGemeente.properties['complete_dataset_' + propertyValue + '2015'];
-	// const value2016 = currentGemeente.properties['complete_dataset_' + propertyValue + '2016'];
-	// const value2017 = currentGemeente.properties['complete_dataset_' + propertyValue + '2017'];
-	// const value2018 = currentGemeente.properties['complete_dataset_' + propertyValue + '2018'];
 	const barPoints = document.querySelectorAll('#year-progression > div');
 	const energyTitle = document.querySelector('aside:nth-of-type(2) > div:nth-of-type(2) h3');
 	const yAxis = document.querySelectorAll('#y-axis p');
@@ -147,15 +142,12 @@ function createGraph(gemeenteNaam) {
 		}
 	};
 
-	createLines(barPoints, currentGemeente);
+	createLines(barPoints);
 };
 
-function createLines(barPoints, currentGemeente) {
+function createLines(barPoints) {
 	const svgItem = document.getElementById('svg-overlay');
 	const svgPath = document.querySelectorAll('#svg-overlay line');
-	const value2015 = currentGemeente.properties['complete_dataset_' + propertyValue + '2015'];
-	const value2018 = currentGemeente.properties['complete_dataset_' + propertyValue + '2018'];
-
 
 	for (let i = 0; i < svgPath.length; i++) {
 		if (barPoints[i].style.opacity === '0') {
