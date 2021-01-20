@@ -96,9 +96,9 @@ aside:nth-of-type(2),
 }
 
 aside:nth-of-type(2) {
-	/*right: -350px;*/
+	right: -350px;
 	margin-top: 30px;
-	right: 0px;
+	/*right: 0px;*/
 	transition: 0.8s all;
 }
 

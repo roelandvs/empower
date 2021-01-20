@@ -8,6 +8,7 @@ const gemeenteNaam = document.getElementsByClassName("gemeente-titel");
 const barPoints = document.querySelectorAll('#year-progression > div');
 const svgPath = document.querySelectorAll('#svg-overlay line');
 let leafletMapPane;
+let currentGemeente;
 
 function checkIfDragOne() {
 	leafletMapPane = document.getElementsByClassName('leaflet-map-pane')[0].attributes[1].value;
@@ -25,7 +26,7 @@ function checkIfDragTwo(gemeente) {
 function buildSidebarLeft(gemeente) {	
 	const shapeClass = document.querySelector(".sidebar-gemeente");
 	const sidebarTitle = document.querySelector("aside:nth-of-type(1) h2");
-	const gemeenteNaam = document.getElementsByClassName("gemeente-titel");
+	// const gemeenteNaam = document.getElementsByClassName("gemeente-titel");
 	const inwonersTekst = document.getElementById("population");
 	const oppervlakteTekst = document.getElementById("surface");
 	const bevDichtheidTekst = document.getElementById("density");
@@ -48,6 +49,8 @@ function buildSidebarLeft(gemeente) {
 	gasTekst.innerText = document.getElementById('gas-s').innerText;
 	bedrijvenTekst.innerText = document.getElementById('businesses-s').innerText;
 	autosTekst.innerText = document.getElementById('cars-s').innerText;
+	currentGemeente = datasetArray.find(item => item.properties.Gemeentena === gemeenteNaam[0].innerText);
+
 
 	//makes the gemeente shape in sidebar
 	shapeClass.setAttribute('d', shapeValues);
@@ -94,8 +97,7 @@ function buildSidebarRight() {
 	sidebarJaar.innerText = '  ' + currentYear;
 };
 
-function createGraph(gemeenteNaam) {
-	const currentGemeente = datasetArray.find(item => item.properties.Gemeentena === gemeenteNaam);
+function createGraph() {
 	const energyTitle = document.querySelector('aside:nth-of-type(2) > div:nth-of-type(2) h3');
 	const yAxis = document.querySelectorAll('#y-axis p');
 	const chartHeight = 90;
@@ -296,6 +298,7 @@ function switchZonneEnergie() {
     energySymbol = ' TJ';
 	generateNewPath();
 	switchEnergy();
+	createGraph();
 };
 
 function switchGroenPercentage() {
@@ -303,6 +306,7 @@ function switchGroenPercentage() {
 	popupEnergyType = 'Green energy:';
     energySymbol = '%';
 	generateNewPath();
+	createGraph();
 };
 
 function switchWindEnergie() {
@@ -310,6 +314,7 @@ function switchWindEnergie() {
 	popupEnergyType = 'Wind energy:';
     energySymbol = ' TJ';
 	generateNewPath();
+	createGraph();
 };
 
 function switchBiogasEnergie() {
@@ -317,6 +322,7 @@ function switchBiogasEnergie() {
 	popupEnergyType = 'Biogas power:';
     energySymbol = ' TJ';
 	generateNewPath();
+	createGraph();
 };
 
 function generateNewPath() {
