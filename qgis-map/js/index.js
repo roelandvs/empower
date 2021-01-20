@@ -57,9 +57,13 @@ function buildSidebarLeft(gemeente) {
 	buttonContainer.style.left = '240px';
 	yearContainer.style.left = '240px';
 	yearContainer.style.left = '240px';
-	document.getElementById('legenda').style.left = '240px';
 	document.querySelector('aside:nth-of-type(2)').style.right = '0px';
 	initiativeSidebar.style.left = '0';
+
+	if (window.innerHeight < 800) {
+		document.getElementById('legenda').style.left = '240px';
+		console.log('yo')
+	} 
 
 	//places the gemeente svg/path on point 0,0
 	if (yCoordinate < 0) {
@@ -207,7 +211,10 @@ function moveSidebar() {
 	initiativeSidebar.style.left = '-300px';
 	buttonContainer.style.left = '0';
 	yearContainer.style.left = '0';
-	document.getElementById('legenda').style.left = '0';
+
+	if (window.innerHeight < 800) {
+		document.getElementById('legenda').style.left = '0';
+	}
 };
 
 function changeYear(jaarItem) {

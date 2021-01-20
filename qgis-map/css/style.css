@@ -599,3 +599,14 @@ aside:nth-of-type(2) > p span  {
 #display-none {
 	display: none;
 }
+
+@media screen and (min-height: 800px) {
+  #legenda {
+    left: auto;
+    right: 0;
+}
+
+.year-selector {
+	bottom: 0;
+	top: auto;
+}
