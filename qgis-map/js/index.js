@@ -56,6 +56,8 @@ function buildSidebarLeft(gemeente) {
 	shapeClass.setAttribute('d', shapeValues);
 	buttonContainer.style.left = '240px';
 	yearContainer.style.left = '240px';
+	yearContainer.style.left = '240px';
+	document.getElementById('legenda').style.left = '240px';
 	document.querySelector('aside:nth-of-type(2)').style.right = '0px';
 	initiativeSidebar.style.left = '0';
 
@@ -86,7 +88,7 @@ function buildSidebarRight() {
 	energyStats[1].innerText = windStats.replace(/,|\./g, '');
 	energyStats[2].innerText = biogasStats;
 
-	if (+(totaalStats.replace(',', '')) - (+(windStats.replace(',', '')) + +biogasStats) + +zonneStats > 0) {
+	if (+(totaalStats.replace(',', '')) - (+(windStats.replace(',', '')) + +biogasStats) + +zonneStats > 0 ) {
 		energyStats[3].innerText = +(totaalStats.replace(/,|\./g, '')) - (+(windStats.replace(/,|\./g, '')) + +(biogasStats.replace(/,|\./g, '')) + +zonneStats);
 	} else {
 		energyStats[3].innerText = '-';
@@ -205,6 +207,7 @@ function moveSidebar() {
 	initiativeSidebar.style.left = '-300px';
 	buttonContainer.style.left = '0';
 	yearContainer.style.left = '0';
+	document.getElementById('legenda').style.left = '0';
 };
 
 function changeYear(jaarItem) {
@@ -241,6 +244,7 @@ function switchEnergy() {
 	const legendaTitle = document.querySelector("#legenda > p");
 	const legendaNumbers = document.querySelectorAll(".color-container > div p");
 
+	console.log(propertyValue)
 	if (propertyValue === "groenPercentage/") {
 		legendaTitle.innerText = "Green energy percentage";
 		legendaColor[1].style.backgroundColor = "#baf0c7";
@@ -253,6 +257,7 @@ function switchEnergy() {
 		legendaNumbers[3].innerText = "25%"
 		legendaNumbers[4].innerText = "35%"
 		legendaNumbers[5].innerText = ">45%"
+		console.log('hey')
 	} else if (propertyValue === "windStroomTj/") {
 		legendaTitle.innerText = "Consumption in TJ";
 		legendaColor[1].style.backgroundColor = "#f3f9ff";
@@ -265,6 +270,8 @@ function switchEnergy() {
 		legendaNumbers[3].innerText = "250"
 		legendaNumbers[4].innerText = "1250"
 		legendaNumbers[5].innerText = "2500"
+		console.log('hey')
+
 	} else if (propertyValue === "zonneStroomTj/") {
 		legendaTitle.innerText = "Consumption in TJ";
 		legendaColor[1].style.backgroundColor = "#f6f5e2";
@@ -277,6 +284,8 @@ function switchEnergy() {
 		legendaNumbers[3].innerText = "80"
 		legendaNumbers[4].innerText = "150"
 		legendaNumbers[5].innerText = "200"
+		console.log('hey')
+
 	} else if (propertyValue === "biogasStroomTj/") {
 		legendaTitle.innerText = "Consumption in TJ";
 		legendaColor[1].style.backgroundColor = "#FFF";
@@ -289,6 +298,8 @@ function switchEnergy() {
 		legendaNumbers[3].innerText = "100"
 		legendaNumbers[4].innerText = "150"
 		legendaNumbers[5].innerText = "200"
+		console.log('hey')
+
 	}
 };
 
@@ -306,6 +317,7 @@ function switchGroenPercentage() {
 	popupEnergyType = 'Green energy:';
     energySymbol = '%';
 	generateNewPath();
+	switchEnergy();
 	createGraph();
 };
 
@@ -314,6 +326,7 @@ function switchWindEnergie() {
 	popupEnergyType = 'Wind energy:';
     energySymbol = ' TJ';
 	generateNewPath();
+	switchEnergy();
 	createGraph();
 };
 
@@ -322,6 +335,7 @@ function switchBiogasEnergie() {
 	popupEnergyType = 'Biogas power:';
     energySymbol = ' TJ';
 	generateNewPath();
+	switchEnergy();
 	createGraph();
 };
 

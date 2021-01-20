@@ -88,8 +88,7 @@ aside:nth-of-type(1) {
 aside:nth-of-type(2),
 #legenda {
 	width: 280px;
-	right: 0;
-	margin: 40px;
+	margin: 50px;
 	border-radius: 20px;
 	padding: 10px;
 	background-color: rgba(247,247,247, 0.87);
@@ -228,10 +227,12 @@ aside:nth-of-type(2) > p span  {
 #legenda {
 	bottom: 0;
 	top: auto;
+	left: 0;
 	height: 80px;
 	background-color: #fff;
-	margin: 40px;
+	margin-bottom: 40px;
 	padding: 10px 20px;
+	transition: 0.8s all;
 }
 
 #legenda p {
@@ -369,7 +370,7 @@ aside:nth-of-type(2) > p span  {
 }
 
 .year-selector {
-	bottom: 0;
+	top: 250px;
 	background-color: rgba(255, 255, 255, 0.9);
 	border-radius: 20px;
 	padding: 15px 10px 5px;
