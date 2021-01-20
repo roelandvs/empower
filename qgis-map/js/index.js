@@ -1,8 +1,12 @@
+//variables that get used in multiple functions
 const initiativeSidebar = document.querySelector("aside");
 const buttonContainer = document.querySelector(".energy-buttons");
 const yearContainer = document.querySelector(".year-selector");
 const yearMenuItems = document.querySelectorAll(".year-selector > p");
 const energyItems = document.querySelectorAll(".energy-buttons > div > div");
+const gemeenteNaam = document.getElementsByClassName("gemeente-titel");
+const barPoints = document.querySelectorAll('#year-progression > div');
+const svgPath = document.querySelectorAll('#svg-overlay line');
 let leafletMapPane;
 
 function checkIfDragOne() {
@@ -67,8 +71,7 @@ function buildSidebarLeft(gemeente) {
 
 function buildSidebarRight() {
 	const sidebarTitle = document.querySelector("aside:nth-of-type(2) h2 span:nth-of-type(1)");
-	const sidebarJaar = document.querySelector("aside:nth-of-type(2) h2 span:nth-of-type(2)");
-	const gemeenteNaam = document.getElementsByClassName("gemeente-titel");
+	const sidebarJaar = document.querySelector("aside:nth-of-type(2) > p span");
 	const energyStats = document.querySelectorAll(".energy-container span");
 	const totaalVerbruik = document.getElementById("totaal-verbruik");
 	const zonneStats = document.getElementById('zonnestroom-' + currentYear).innerText;
@@ -93,7 +96,6 @@ function buildSidebarRight() {
 
 function createGraph(gemeenteNaam) {
 	const currentGemeente = datasetArray.find(item => item.properties.Gemeentena === gemeenteNaam);
-	const barPoints = document.querySelectorAll('#year-progression > div');
 	const energyTitle = document.querySelector('aside:nth-of-type(2) > div:nth-of-type(2) h3');
 	const yAxis = document.querySelectorAll('#y-axis p');
 	const chartHeight = 90;
@@ -147,7 +149,6 @@ function createGraph(gemeenteNaam) {
 
 function createLines(barPoints) {
 	const svgItem = document.getElementById('svg-overlay');
-	const svgPath = document.querySelectorAll('#svg-overlay line');
 
 	for (let i = 0; i < svgPath.length; i++) {
 		if (barPoints[i].style.opacity === '0') {
@@ -166,13 +167,42 @@ function createLines(barPoints) {
 			}
 		}
 	};
+
+	colorGraphLines();
+};
+
+function colorGraphLines(){
+	if (propertyValue === "groenPercentage/") {
+		for (let i = 0; i < svgPath.length; i++) {
+	    	svgPath[i].setAttribute('stroke', '#6bd679');
+	    	barPoints[i].style.backgroundColor = '#2ea83e';
+	    	barPoints[3].style.backgroundColor = '#2ea83e';
+    	}
+	} else if (propertyValue === "windStroomTj/") {
+		for (let i = 0; i < svgPath.length; i++) {
+	    	svgPath[i].setAttribute('stroke', '#69bffd');
+	    	barPoints[i].style.backgroundColor = '#3597f3';
+	    	barPoints[3].style.backgroundColor = '#3597f3';
+    	}
+	} else if (propertyValue === "zonneStroomTj/") {
+		for (let i = 0; i < svgPath.length; i++) {
+	    	svgPath[i].setAttribute('stroke', '#fed83e');
+	    	barPoints[i].style.backgroundColor = '#ff9900';
+	    	barPoints[3].style.backgroundColor = '#ff9900';
+    	}
+	} else if (propertyValue === "biogasStroomTj/") {
+		for (let i = 0; i < svgPath.length; i++) {
+	    	svgPath[i].setAttribute('stroke', '#a0aec9');
+	    	barPoints[i].style.backgroundColor = '#44518e';
+	    	barPoints[3].style.backgroundColor = '#44518e';
+    	}
+	}
 };
 
 function moveSidebar() {
 	initiativeSidebar.style.left = '-300px';
 	buttonContainer.style.left = '0';
 	yearContainer.style.left = '0';
-	document.querySelector('aside:nth-of-type(2)').style.right = '-350px';
 };
 
 function changeYear(jaarItem) {
@@ -273,7 +303,6 @@ function switchGroenPercentage() {
 	popupEnergyType = 'Green energy:';
     energySymbol = '%';
 	generateNewPath();
-	switchEnergy();
 };
 
 function switchWindEnergie() {
@@ -281,7 +310,6 @@ function switchWindEnergie() {
 	popupEnergyType = 'Wind energy:';
     energySymbol = ' TJ';
 	generateNewPath();
-	switchEnergy();
 };
 
 function switchBiogasEnergie() {
@@ -289,7 +317,6 @@ function switchBiogasEnergie() {
 	popupEnergyType = 'Biogas power:';
     energySymbol = ' TJ';
 	generateNewPath();
-	switchEnergy();
 };
 
 function generateNewPath() {
