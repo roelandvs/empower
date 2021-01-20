@@ -86,7 +86,7 @@ function buildSidebarRight() {
 	energyStats[1].innerText = windStats.replace(/,|\./g, '');
 	energyStats[2].innerText = biogasStats;
 
-	if (+(totaalStats.replace(',', '')) - (+(windStats.replace(',', '')) + +biogasStats) + +zonneStats) {
+	if (+(totaalStats.replace(',', '')) - (+(windStats.replace(',', '')) + +biogasStats) + +zonneStats > 0) {
 		energyStats[3].innerText = +(totaalStats.replace(/,|\./g, '')) - (+(windStats.replace(/,|\./g, '')) + +(biogasStats.replace(/,|\./g, '')) + +zonneStats);
 	} else {
 		energyStats[3].innerText = '-';
@@ -94,7 +94,7 @@ function buildSidebarRight() {
 
 	sidebarTitle.innerText = gemeenteNaam[0].innerText;
 	totaalVerbruik.innerText = totaalStats.replace(/,|\./g, '') + ' TJ';
-	sidebarJaar.innerText = '  ' + currentYear;
+	sidebarJaar.innerText = currentYear;
 };
 
 function createGraph() {
