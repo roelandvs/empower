@@ -487,6 +487,22 @@ aside:nth-of-type(2) > p span  {
 	margin-right: 10px;
 }
 
+.more-button {
+	margin: 20px 10px;
+	text-align: center;
+	border-radius: 100px;
+	border: 3px solid #6A67F6;
+	color: #6A67F6;
+	padding: 8px 0;
+	transition: 0.5s all;
+}
+
+.more-button:hover {
+	background-color: #9694FF;
+	border: 3px solid #9694FF;
+	color: #fff;
+}
+
 .energy-buttons > div {
 	overflow: hidden;
 	height: 40px;
@@ -548,7 +564,6 @@ aside:nth-of-type(2) > p span  {
 
 .energy-buttons > div:hover {
 	width: 160px;
-
 }
 
 .round-button img {
