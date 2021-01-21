@@ -282,9 +282,9 @@ function switchEnergy() {
 		legendaColor[3].style.backgroundColor = "#fce54e";
 		legendaColor[4].style.backgroundColor = "#ffab2c";
 		legendaColor[5].style.backgroundColor = "#ff9900";
-		legendaNumbers[1].innerText = "10"
-		legendaNumbers[2].innerText = "40"
-		legendaNumbers[3].innerText = "80"
+		legendaNumbers[1].innerText = "0"
+		legendaNumbers[2].innerText = "50"
+		legendaNumbers[3].innerText = "100"
 		legendaNumbers[4].innerText = "150"
 		legendaNumbers[5].innerText = "200"
 	} else if (propertyValue === "biogasStroomTj/") {
