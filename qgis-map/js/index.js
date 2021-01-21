@@ -265,11 +265,11 @@ function switchEnergy() {
 		legendaNumbers[5].innerText = ">45%"
 	} else if (propertyValue === "windStroomTj/") {
 		legendaTitle.innerText = "Consumption in TJ";
-		legendaColor[1].style.backgroundColor = "#f3f9ff";
-		legendaColor[2].style.backgroundColor = "#e0f1fe";
-		legendaColor[3].style.backgroundColor = "#a7d8fc";
-		legendaColor[4].style.backgroundColor = "#37a0f8";
-		legendaColor[5].style.backgroundColor = "#1888f2";
+		legendaColor[1].style.backgroundColor = "#edf7ff";
+		legendaColor[2].style.backgroundColor = "#c6e6fe";
+		legendaColor[3].style.backgroundColor = "#5eb9fc";
+		legendaColor[4].style.backgroundColor = "#3b76f9";
+		legendaColor[5].style.backgroundColor = "#0a60d5";
 		legendaNumbers[1].innerText = "10"
 		legendaNumbers[2].innerText = "50"
 		legendaNumbers[3].innerText = "250"

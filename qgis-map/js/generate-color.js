@@ -4846,7 +4846,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                     break;
             }
         }
-       
+
      else if (propertyValue === 'windStroomTj/') {
         switch(String(feature.properties['complete_dataset_' + propertyValue + currentYear])) {
                 default:
@@ -4875,7 +4875,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(247,251,255,1.0)',
+                fillColor: 'rgba(246,251,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -4890,7 +4890,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(247,251,255,1.0)',
+                fillColor: 'rgba(245,251,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -4905,7 +4905,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(246,251,255,1.0)',
+                fillColor: 'rgba(244,250,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -4920,7 +4920,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(246,251,255,1.0)',
+                fillColor: 'rgba(243,250,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -4935,7 +4935,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(245,250,255,1.0)',
+                fillColor: 'rgba(242,249,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -4950,7 +4950,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(245,250,255,1.0)',
+                fillColor: 'rgba(241,249,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -4965,7 +4965,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(244,250,255,1.0)',
+                fillColor: 'rgba(240,248,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -4980,7 +4980,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(244,250,255,1.0)',
+                fillColor: 'rgba(239,248,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -4995,7 +4995,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(243,250,255,1.0)',
+                fillColor: 'rgba(238,247,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5010,7 +5010,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(243,249,255,1.0)',
+                fillColor: 'rgba(237,247,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5025,7 +5025,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(243,249,255,1.0)',
+                fillColor: 'rgba(236,247,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5040,7 +5040,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(242,249,255,1.0)',
+                fillColor: 'rgba(235,246,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5055,7 +5055,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(242,249,255,1.0)',
+                fillColor: 'rgba(234,246,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5070,7 +5070,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(241,249,255,1.0)',
+                fillColor: 'rgba(233,245,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5085,7 +5085,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(241,248,255,1.0)',
+                fillColor: 'rgba(232,245,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5100,7 +5100,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(240,248,255,1.0)',
+                fillColor: 'rgba(231,244,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5115,7 +5115,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(240,248,255,1.0)',
+                fillColor: 'rgba(230,244,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5130,7 +5130,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(239,248,255,1.0)',
+                fillColor: 'rgba(229,243,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5145,7 +5145,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(239,248,255,1.0)',
+                fillColor: 'rgba(228,243,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5160,7 +5160,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(238,247,255,1.0)',
+                fillColor: 'rgba(227,242,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5175,7 +5175,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(238,247,255,1.0)',
+                fillColor: 'rgba(225,242,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5190,7 +5190,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(238,247,255,1.0)',
+                fillColor: 'rgba(224,242,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5205,7 +5205,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(237,247,255,1.0)',
+                fillColor: 'rgba(223,241,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5220,7 +5220,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(237,247,255,1.0)',
+                fillColor: 'rgba(222,241,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5235,7 +5235,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(236,246,255,1.0)',
+                fillColor: 'rgba(221,240,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5250,7 +5250,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(236,246,255,1.0)',
+                fillColor: 'rgba(220,240,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5265,7 +5265,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(235,246,255,1.0)',
+                fillColor: 'rgba(219,239,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5280,7 +5280,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(235,246,255,1.0)',
+                fillColor: 'rgba(218,239,255,1.0)',
                 interactive: true,
             }
                     break;
@@ -5295,7 +5295,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(234,246,255,1.0)',
+                fillColor: 'rgba(217,238,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5310,7 +5310,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(234,245,255,1.0)',
+                fillColor: 'rgba(216,238,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5325,7 +5325,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(234,245,255,1.0)',
+                fillColor: 'rgba(215,237,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5340,7 +5340,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(233,245,254,1.0)',
+                fillColor: 'rgba(214,237,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5355,7 +5355,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(233,245,254,1.0)',
+                fillColor: 'rgba(213,237,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5370,7 +5370,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(232,245,254,1.0)',
+                fillColor: 'rgba(212,236,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5385,7 +5385,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(232,244,254,1.0)',
+                fillColor: 'rgba(211,236,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5400,7 +5400,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(231,244,254,1.0)',
+                fillColor: 'rgba(210,235,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5415,7 +5415,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(231,244,254,1.0)',
+                fillColor: 'rgba(209,235,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5430,7 +5430,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(230,244,254,1.0)',
+                fillColor: 'rgba(208,234,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5445,7 +5445,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(230,243,254,1.0)',
+                fillColor: 'rgba(207,234,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5460,7 +5460,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(230,243,254,1.0)',
+                fillColor: 'rgba(206,233,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5475,7 +5475,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(229,243,254,1.0)',
+                fillColor: 'rgba(205,233,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5490,7 +5490,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(229,243,254,1.0)',
+                fillColor: 'rgba(203,233,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5505,7 +5505,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(228,243,254,1.0)',
+                fillColor: 'rgba(202,232,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5520,7 +5520,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(228,242,254,1.0)',
+                fillColor: 'rgba(201,232,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5535,7 +5535,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(227,242,254,1.0)',
+                fillColor: 'rgba(200,231,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5550,7 +5550,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(227,242,254,1.0)',
+                fillColor: 'rgba(199,231,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5565,7 +5565,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(226,242,254,1.0)',
+                fillColor: 'rgba(198,230,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5580,7 +5580,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(226,242,254,1.0)',
+                fillColor: 'rgba(197,230,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5595,7 +5595,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(225,241,254,1.0)',
+                fillColor: 'rgba(196,229,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5610,7 +5610,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(225,241,254,1.0)',
+                fillColor: 'rgba(195,229,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5625,7 +5625,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(225,241,254,1.0)',
+                fillColor: 'rgba(194,228,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5640,7 +5640,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(224,241,254,1.0)',
+                fillColor: 'rgba(193,228,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5655,7 +5655,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(224,241,254,1.0)',
+                fillColor: 'rgba(192,228,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5670,7 +5670,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(223,240,254,1.0)',
+                fillColor: 'rgba(191,227,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5685,7 +5685,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(223,240,254,1.0)',
+                fillColor: 'rgba(190,227,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5700,7 +5700,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(222,240,254,1.0)',
+                fillColor: 'rgba(189,226,254,1.0)',
                 interactive: true,
             }
                     break;
@@ -5715,7 +5715,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(222,240,254,1.0)',
+                fillColor: 'rgba(188,226,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -5730,7 +5730,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(221,240,254,1.0)',
+                fillColor: 'rgba(187,225,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -5745,7 +5745,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(221,239,254,1.0)',
+                fillColor: 'rgba(186,225,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -5760,7 +5760,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(221,239,254,1.0)',
+                fillColor: 'rgba(185,224,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -5775,7 +5775,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(220,239,254,1.0)',
+                fillColor: 'rgba(184,224,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -5790,7 +5790,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(220,239,254,1.0)',
+                fillColor: 'rgba(183,224,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -5805,7 +5805,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(219,239,254,1.0)',
+                fillColor: 'rgba(181,223,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -5820,7 +5820,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(219,238,253,1.0)',
+                fillColor: 'rgba(180,223,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -5835,7 +5835,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(218,238,253,1.0)',
+                fillColor: 'rgba(179,222,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -5850,7 +5850,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(218,238,253,1.0)',
+                fillColor: 'rgba(178,222,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -5865,7 +5865,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(217,238,253,1.0)',
+                fillColor: 'rgba(177,221,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -5880,7 +5880,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(217,238,253,1.0)',
+                fillColor: 'rgba(176,221,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -5895,7 +5895,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(216,237,253,1.0)',
+                fillColor: 'rgba(175,220,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -5910,7 +5910,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(216,237,253,1.0)',
+                fillColor: 'rgba(174,220,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -5925,7 +5925,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(216,237,253,1.0)',
+                fillColor: 'rgba(173,219,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -5940,7 +5940,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(215,237,253,1.0)',
+                fillColor: 'rgba(172,219,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -5955,7 +5955,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(215,237,253,1.0)',
+                fillColor: 'rgba(171,219,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -5970,7 +5970,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(214,236,253,1.0)',
+                fillColor: 'rgba(170,218,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -5985,7 +5985,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(214,236,253,1.0)',
+                fillColor: 'rgba(169,218,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6000,7 +6000,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(213,236,253,1.0)',
+                fillColor: 'rgba(168,217,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6015,7 +6015,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(213,236,253,1.0)',
+                fillColor: 'rgba(167,217,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6030,7 +6030,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(212,236,253,1.0)',
+                fillColor: 'rgba(166,216,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6045,7 +6045,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(212,235,253,1.0)',
+                fillColor: 'rgba(165,216,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6060,7 +6060,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(212,235,253,1.0)',
+                fillColor: 'rgba(164,215,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6075,7 +6075,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(211,235,253,1.0)',
+                fillColor: 'rgba(163,215,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6090,7 +6090,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(211,235,253,1.0)',
+                fillColor: 'rgba(162,214,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6105,7 +6105,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(210,234,253,1.0)',
+                fillColor: 'rgba(161,214,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6120,7 +6120,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(210,234,253,1.0)',
+                fillColor: 'rgba(159,214,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6135,7 +6135,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(209,234,253,1.0)',
+                fillColor: 'rgba(158,213,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6150,7 +6150,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(209,234,253,1.0)',
+                fillColor: 'rgba(157,213,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6165,7 +6165,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(208,234,253,1.0)',
+                fillColor: 'rgba(156,212,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6180,7 +6180,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(208,233,253,1.0)',
+                fillColor: 'rgba(155,212,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6195,7 +6195,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(207,233,253,1.0)',
+                fillColor: 'rgba(154,211,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6210,7 +6210,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(207,233,253,1.0)',
+                fillColor: 'rgba(153,211,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6225,7 +6225,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(207,233,253,1.0)',
+                fillColor: 'rgba(152,210,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6240,7 +6240,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(206,233,253,1.0)',
+                fillColor: 'rgba(151,210,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6255,7 +6255,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(206,232,253,1.0)',
+                fillColor: 'rgba(150,210,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6270,7 +6270,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(205,232,253,1.0)',
+                fillColor: 'rgba(149,209,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6285,7 +6285,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(205,232,253,1.0)',
+                fillColor: 'rgba(148,209,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6300,7 +6300,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(204,232,252,1.0)',
+                fillColor: 'rgba(147,208,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6315,7 +6315,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(204,232,252,1.0)',
+                fillColor: 'rgba(146,208,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6330,7 +6330,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(203,231,252,1.0)',
+                fillColor: 'rgba(145,207,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6345,7 +6345,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(203,231,252,1.0)',
+                fillColor: 'rgba(144,207,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6360,7 +6360,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(203,231,252,1.0)',
+                fillColor: 'rgba(143,206,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6375,7 +6375,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(202,231,252,1.0)',
+                fillColor: 'rgba(142,206,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6390,7 +6390,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(202,231,252,1.0)',
+                fillColor: 'rgba(141,205,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6405,7 +6405,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(201,230,252,1.0)',
+                fillColor: 'rgba(140,205,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6420,7 +6420,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(201,230,252,1.0)',
+                fillColor: 'rgba(139,205,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6435,7 +6435,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(200,230,252,1.0)',
+                fillColor: 'rgba(137,204,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6450,7 +6450,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(200,230,252,1.0)',
+                fillColor: 'rgba(136,204,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6465,7 +6465,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(199,230,252,1.0)',
+                fillColor: 'rgba(135,203,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6480,7 +6480,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(199,229,252,1.0)',
+                fillColor: 'rgba(134,203,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6495,7 +6495,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(199,229,252,1.0)',
+                fillColor: 'rgba(133,202,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6510,7 +6510,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(198,229,252,1.0)',
+                fillColor: 'rgba(132,202,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6525,7 +6525,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(198,229,252,1.0)',
+                fillColor: 'rgba(131,201,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6540,7 +6540,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,229,252,1.0)',
+                fillColor: 'rgba(130,201,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6555,7 +6555,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,228,252,1.0)',
+                fillColor: 'rgba(129,201,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6570,7 +6570,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(196,228,252,1.0)',
+                fillColor: 'rgba(128,200,251,1.0)',
                 interactive: true,
             }
                     break;
@@ -6585,7 +6585,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(196,228,252,1.0)',
+                fillColor: 'rgba(125,199,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6600,7 +6600,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(195,228,252,1.0)',
+                fillColor: 'rgba(123,198,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6615,7 +6615,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(195,228,252,1.0)',
+                fillColor: 'rgba(120,196,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6630,7 +6630,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(194,227,252,1.0)',
+                fillColor: 'rgba(117,195,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6645,7 +6645,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(194,227,252,1.0)',
+                fillColor: 'rgba(114,194,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6660,7 +6660,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(194,227,252,1.0)',
+                fillColor: 'rgba(111,193,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6675,7 +6675,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(193,227,252,1.0)',
+                fillColor: 'rgba(108,192,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6690,7 +6690,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(193,226,252,1.0)',
+                fillColor: 'rgba(106,190,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6705,7 +6705,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(192,226,252,1.0)',
+                fillColor: 'rgba(103,189,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6720,7 +6720,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(192,226,252,1.0)',
+                fillColor: 'rgba(100,188,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6735,7 +6735,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(191,226,252,1.0)',
+                fillColor: 'rgba(97,187,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6750,7 +6750,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(191,226,252,1.0)',
+                fillColor: 'rgba(94,185,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6765,7 +6765,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(190,225,251,1.0)',
+                fillColor: 'rgba(91,184,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6780,7 +6780,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(188,225,252,1.0)',
+                fillColor: 'rgba(89,183,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6795,7 +6795,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(185,223,252,1.0)',
+                fillColor: 'rgba(86,182,252,1.0)',
                 interactive: true,
             }
                     break;
@@ -6810,7 +6810,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(181,222,252,1.0)',
+                fillColor: 'rgba(83,181,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6825,7 +6825,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(178,220,252,1.0)',
+                fillColor: 'rgba(80,179,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6840,7 +6840,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(174,219,252,1.0)',
+                fillColor: 'rgba(77,178,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6855,7 +6855,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(171,218,252,1.0)',
+                fillColor: 'rgba(74,177,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6870,7 +6870,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(167,216,252,1.0)',
+                fillColor: 'rgba(72,176,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6885,7 +6885,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(164,215,252,1.0)',
+                fillColor: 'rgba(69,174,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6900,7 +6900,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(161,213,252,1.0)',
+                fillColor: 'rgba(66,173,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6915,7 +6915,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(157,212,252,1.0)',
+                fillColor: 'rgba(63,172,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6930,7 +6930,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(154,211,252,1.0)',
+                fillColor: 'rgba(60,171,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6945,7 +6945,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(150,209,252,1.0)',
+                fillColor: 'rgba(57,169,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6960,7 +6960,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(147,208,252,1.0)',
+                fillColor: 'rgba(54,168,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6975,7 +6975,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(143,207,252,1.0)',
+                fillColor: 'rgba(52,167,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -6990,7 +6990,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(140,205,252,1.0)',
+                fillColor: 'rgba(49,166,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7005,7 +7005,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(136,204,252,1.0)',
+                fillColor: 'rgba(46,165,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7020,7 +7020,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(133,202,253,1.0)',
+                fillColor: 'rgba(43,163,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7035,7 +7035,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(129,201,253,1.0)',
+                fillColor: 'rgba(43,162,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7050,7 +7050,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(126,200,253,1.0)',
+                fillColor: 'rgba(44,161,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7065,7 +7065,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(122,198,253,1.0)',
+                fillColor: 'rgba(45,159,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7080,7 +7080,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(119,197,253,1.0)',
+                fillColor: 'rgba(45,158,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7095,7 +7095,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(116,195,253,1.0)',
+                fillColor: 'rgba(46,157,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7110,7 +7110,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(112,194,253,1.0)',
+                fillColor: 'rgba(47,155,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7125,7 +7125,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(109,193,253,1.0)',
+                fillColor: 'rgba(47,154,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7140,7 +7140,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(105,191,253,1.0)',
+                fillColor: 'rgba(48,153,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7155,7 +7155,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(102,190,253,1.0)',
+                fillColor: 'rgba(49,151,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7170,7 +7170,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(98,189,253,1.0)',
+                fillColor: 'rgba(49,150,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7185,7 +7185,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(95,187,253,1.0)',
+                fillColor: 'rgba(50,149,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7200,7 +7200,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(91,186,253,1.0)',
+                fillColor: 'rgba(51,147,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7215,7 +7215,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(88,184,253,1.0)',
+                fillColor: 'rgba(52,146,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7230,7 +7230,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(84,183,253,1.0)',
+                fillColor: 'rgba(52,145,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7245,7 +7245,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(81,182,253,1.0)',
+                fillColor: 'rgba(53,143,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7260,7 +7260,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(79,180,253,1.0)',
+                fillColor: 'rgba(54,142,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7275,7 +7275,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(77,179,253,1.0)',
+                fillColor: 'rgba(54,141,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7290,7 +7290,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(76,178,253,1.0)',
+                fillColor: 'rgba(55,139,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7305,7 +7305,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(74,176,252,1.0)',
+                fillColor: 'rgba(56,138,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7320,7 +7320,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(72,175,252,1.0)',
+                fillColor: 'rgba(56,137,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7335,7 +7335,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(71,173,252,1.0)',
+                fillColor: 'rgba(57,135,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7350,7 +7350,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(69,172,251,1.0)',
+                fillColor: 'rgba(58,134,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7365,7 +7365,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(68,171,251,1.0)',
+                fillColor: 'rgba(58,132,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7380,7 +7380,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(66,169,250,1.0)',
+                fillColor: 'rgba(59,131,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7395,7 +7395,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(64,168,250,1.0)',
+                fillColor: 'rgba(60,130,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7410,7 +7410,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(63,167,250,1.0)',
+                fillColor: 'rgba(61,128,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7425,7 +7425,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(61,165,249,1.0)',
+                fillColor: 'rgba(61,126,253,1.0)',
                 interactive: true,
             }
                     break;
@@ -7440,7 +7440,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(60,164,249,1.0)',
+                fillColor: 'rgba(60,123,251,1.0)',
                 interactive: true,
             }
                     break;
@@ -7455,7 +7455,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(58,163,249,1.0)',
+                fillColor: 'rgba(60,121,250,1.0)',
                 interactive: true,
             }
                     break;
@@ -7470,7 +7470,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(57,161,248,1.0)',
+                fillColor: 'rgba(59,118,249,1.0)',
                 interactive: true,
             }
                     break;
@@ -7485,7 +7485,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(55,160,248,1.0)',
+                fillColor: 'rgba(59,115,248,1.0)',
                 interactive: true,
             }
                     break;
@@ -7500,7 +7500,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(53,158,248,1.0)',
+                fillColor: 'rgba(59,113,247,1.0)',
                 interactive: true,
             }
                     break;
@@ -7515,7 +7515,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(52,157,247,1.0)',
+                fillColor: 'rgba(58,110,245,1.0)',
                 interactive: true,
             }
                     break;
@@ -7530,7 +7530,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(50,156,247,1.0)',
+                fillColor: 'rgba(58,107,244,1.0)',
                 interactive: true,
             }
                     break;
@@ -7545,7 +7545,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(49,154,247,1.0)',
+                fillColor: 'rgba(58,104,243,1.0)',
                 interactive: true,
             }
                     break;
@@ -7560,7 +7560,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(47,153,246,1.0)',
+                fillColor: 'rgba(33,110,231,1.0)',
                 interactive: true,
             }
                     break;
@@ -7575,7 +7575,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(45,152,246,1.0)',
+                fillColor: 'rgba(30,109,229,1.0)',
                 interactive: true,
             }
                     break;
@@ -7590,7 +7590,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(44,150,246,1.0)',
+                fillColor: 'rgba(28,107,227,1.0)',
                 interactive: true,
             }
                     break;
@@ -7605,7 +7605,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(42,149,245,1.0)',
+                fillColor: 'rgba(25,105,225,1.0)',
                 interactive: true,
             }
                     break;
@@ -7620,7 +7620,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(41,148,245,1.0)',
+                fillColor: 'rgba(22,103,222,1.0)',
                 interactive: true,
             }
                     break;
@@ -7635,7 +7635,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(39,146,245,1.0)',
+                fillColor: 'rgba(19,101,220,1.0)',
                 interactive: true,
             }
                     break;
@@ -7650,7 +7650,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(38,145,244,1.0)',
+                fillColor: 'rgba(16,100,218,1.0)',
                 interactive: true,
             }
                     break;
@@ -7665,7 +7665,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(36,143,244,1.0)',
+                fillColor: 'rgba(13,98,215,1.0)',
                 interactive: true,
             }
                     break;
@@ -7680,7 +7680,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(34,142,243,1.0)',
+                fillColor: 'rgba(10,96,213,1.0)',
                 interactive: true,
             }
                     break;
@@ -7695,7 +7695,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(33,141,243,1.0)',
+                fillColor: 'rgba(8,94,211,1.0)',
                 interactive: true,
             }
                     break;
@@ -7710,7 +7710,7 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,139,243,1.0)',
+                fillColor: 'rgba(5,92,209,1.0)',
                 interactive: true,
             }
                     break;
@@ -7725,12 +7725,12 @@ function style_Gemeentegrenzen_2019shpGemeentegrenzen__voorlopig____kustlijn_0_0
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(30,138,242,1.0)',
+                fillColor: 'rgba(2,90,206,1.0)',
                 interactive: true,
             }
                     break;
             }
-        } 
+        }
         else if (propertyValue === 'biogasStroomTj/') {
             switch(String(feature.properties['complete_dataset_' + propertyValue + currentYear])) {
                 default:
