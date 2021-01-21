@@ -92,7 +92,10 @@ function buildSidebarRight() {
 	energyStats[1].innerText = windStats.replace(/,|\./g, '');
 	energyStats[2].innerText = biogasStats;
 
-	if (+(totaalStats.replace(',', '')) - (+(windStats.replace(',', '')) + +biogasStats) + +zonneStats > 0 ) {
+	console.log()
+	console.log('totale formule', +(totaalStats.replace(/,|\./g, '')) - (+(windStats.replace(/,|\./g, '')) + +(biogasStats.replace(/,|\./g, '')) + +zonneStats))
+
+	if ((+(totaalStats.replace(',', '')) - +(windStats.replace(',', '')) - +biogasStats - +zonneStats) > 0) {
 		energyStats[3].innerText = +(totaalStats.replace(/,|\./g, '')) - (+(windStats.replace(/,|\./g, '')) + +(biogasStats.replace(/,|\./g, '')) + +zonneStats);
 	} else {
 		energyStats[3].innerText = '-';
@@ -264,7 +267,6 @@ function switchEnergy() {
 		legendaNumbers[3].innerText = "25%"
 		legendaNumbers[4].innerText = "35%"
 		legendaNumbers[5].innerText = ">45%"
-		console.log('hey')
 	} else if (propertyValue === "windStroomTj/") {
 		legendaTitle.innerText = "Consumption in TJ";
 		legendaColor[1].style.backgroundColor = "#f3f9ff";
@@ -277,8 +279,6 @@ function switchEnergy() {
 		legendaNumbers[3].innerText = "250"
 		legendaNumbers[4].innerText = "1250"
 		legendaNumbers[5].innerText = "2500"
-		console.log('hey')
-
 	} else if (propertyValue === "zonneStroomTj/") {
 		legendaTitle.innerText = "Consumption in TJ";
 		legendaColor[1].style.backgroundColor = "#f6f5e2";
@@ -291,8 +291,6 @@ function switchEnergy() {
 		legendaNumbers[3].innerText = "80"
 		legendaNumbers[4].innerText = "150"
 		legendaNumbers[5].innerText = "200"
-		console.log('hey')
-
 	} else if (propertyValue === "biogasStroomTj/") {
 		legendaTitle.innerText = "Consumption in TJ";
 		legendaColor[1].style.backgroundColor = "#FFF";
@@ -305,8 +303,6 @@ function switchEnergy() {
 		legendaNumbers[3].innerText = "100"
 		legendaNumbers[4].innerText = "150"
 		legendaNumbers[5].innerText = "200"
-		console.log('hey')
-
 	}
 };
 
