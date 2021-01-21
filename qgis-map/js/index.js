@@ -62,7 +62,6 @@ function buildSidebarLeft(gemeente) {
 
 	if (window.innerHeight < 800) {
 		document.getElementById('legenda').style.left = '240px';
-		console.log('yo')
 	} 
 
 	//places the gemeente svg/path on point 0,0
@@ -95,9 +94,11 @@ function buildSidebarRight() {
 	console.log()
 	console.log('totale formule', +(totaalStats.replace(/,|\./g, '')) - (+(windStats.replace(/,|\./g, '')) + +(biogasStats.replace(/,|\./g, '')) + +zonneStats))
 
-	if ((+(totaalStats.replace(',', '')) - +(windStats.replace(',', '')) - +biogasStats - +zonneStats) > 0) {
+	if (+(totaalStats.replace(/,|\./g, '')) - (+(windStats.replace(/,|\./g, '')) + +(biogasStats.replace(/,|\./g, '')) + +zonneStats) > 0) {
+		console.log('wel grey energy');
 		energyStats[3].innerText = +(totaalStats.replace(/,|\./g, '')) - (+(windStats.replace(/,|\./g, '')) + +(biogasStats.replace(/,|\./g, '')) + +zonneStats);
 	} else {
+		console.log('geen grey energy');
 		energyStats[3].innerText = '-';
 	}
 
