@@ -32,6 +32,8 @@ li {
     color: #24337A;
 }
 
+
+
 h1,
 h2,
 h3 {
@@ -52,11 +54,13 @@ h4 {
 
 h5 {
     color: #E5E5E5;
+    font-size: 1em;
 }
 
 ol {
     list-style-type: none;
 }
+
 
 section {
     background-color: white;
@@ -208,6 +212,7 @@ button.add {
 
 .connections > div img {
     padding-bottom: 5px;
+        max-width: 120px;
 }
 
 .connections ol {
@@ -326,72 +331,9 @@ button.more:hover {
 }
 
 .add2:hover {
-    background-color: white;
-
+    background-color: #9795F9;
     transition: .5s;
 }
-
-.add2:hover + img {
-    fill: blue;
-}
-
-#tabMenu {
-    background-color: #EFF7FF;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 50px;
-    z-index: 5;
-}
-
-.tabBar {
-    background-color: #F5F7FB;
-    padding: 10px 10px 10px 40px;
-    width: 260px;
-    max-height: 70px;
-    border-radius: 100px;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0px 0px 25px rgba(195, 208, 222, 0.5);
-}
-
-.tabBar button.active {
-    background-color: white;
-    padding: 10px;
-    border-radius: 100px;
-}
-
-.active p {
-    float: right;
-    font-size: 1.1em;
-    font-weight: 700;
-    color: #6A67F6;
-    margin-left: 10px;
-    padding-right: 10px;
-    line-height: 2;
-}
-
-.tabBar button {
-    border: none;
-    background-color: #F5F7FB;
-}
-
-.tabBar img {
-    min-width: 15%;
-}
-
-button.exit {
-    min-width: 50px;
-    height: 50px;
-    margin: 10px 0px 0px 30px;
-    background-color: #F7FAFC;
-    box-shadow: 0px 0px 25px rgba(195, 208, 222, 0.3);
-}
-
-button.exit img {
-    margin: 1px 0px 0px 3px;
-}
-
-
 
 
 
@@ -416,7 +358,7 @@ input[type=text] {
 
 
 #connectPage {
-    background-image: url('../img/map.png');
+    background-image: url('../images/teunis-images/map.png');
     background-repeat: no-repeat;
     background-size: cover;
     overflow-y: hidden;
@@ -430,19 +372,14 @@ input[type=text] {
     background-color: pink;
     width: 48vw;
     height: 100vh;
-
     position: absolute;
-    opacity: .4;
-
+    opacity: .0;
     right: 0;
-
 }
 
-
 #connectPopups {
-    margin-top: 378px;
     width: 30%;
-    margin-bottom: 220px;
+    margin: 378px 0px 220px 20px;
     background-color: rgba(255, 255, 255, 0);
 }
 
@@ -482,8 +419,6 @@ input[type=text] {
     clip-path: inset(0 0 0 0);
     transition: .5s;
 }
-
-
 
 
 
@@ -540,7 +475,6 @@ input[type=text] {
     margin-top: 15px;
 }
 
-
 textarea {
     font-family: 'Roboto', 'sans-serif';
     color: #24337A;
@@ -566,13 +500,10 @@ textarea {
     width: 100%;
 }
 
-
-
 #connectPage h5 {
     margin-bottom: 30px;
     font-size: 1.2em;
 }
-
 
 #connectPage #sidebar {
     background-color: rgba(255, 255, 255, 0);
@@ -610,14 +541,6 @@ textarea {
 
 .filter li.active:hover {
     transform: scale(1);
-}
-
-.active {
-    background-color: white;
-    color: #6A67F6;
-    border: 3px solid #6A67F6;
-    border-radius: 50px;
-    min-width: 80px;
 }
 
 #search {
@@ -673,7 +596,7 @@ textarea {
     background-color: rgba(195, 208, 222, 0);
     overflow-y: scroll;
     height: 70vh;
-    min-width: 450px;
+    min-width: 400px;
     padding-bottom: 200px;
 
     clip-path: inset(0% 0% 0% 0% round 18px);
@@ -681,7 +604,6 @@ textarea {
 
     animation: 1s ease-out 0s 1 networkLoad;
 }
-
 
 
 
@@ -704,8 +626,6 @@ textarea {
     transition: .5s;
 }
 
-
-
 .sorteren li {
     margin-right: 10px;
 }
@@ -723,7 +643,6 @@ textarea {
     color: #24337A;
     transition: .25s;
 }
-
 
 .sorteren img {
     width: 130%;
@@ -743,7 +662,6 @@ textarea {
     transition: .5s;
 }
 
-
 .results {
     margin-bottom: 20px;
 
@@ -758,12 +676,10 @@ textarea {
 
 }
 
-
 .connectCard:hover {
     transform: scale(0.995);
     transition: .2s;
 }
-
 
 .connectCard ol {
     margin-left: 20px;
@@ -804,7 +720,6 @@ a:visited {
     padding: 5px 0px 5px 0px;
 }
 
-
 .save {
     color: white;
     font-weight: 700;
@@ -844,41 +759,71 @@ a:visited {
     transition: .5s;
 }
 
-
 .profilePic {
     min-width: 80px;
     height: 80px;
     margin-top: 8px;
 }
 
-#connectPage #tabMenu {
-    position: fixed;
-    bottom: 100px;
-    right: 100px;
+#tabMenu {
+    z-index: 1100;
+    position: absolute;
+    bottom: 40px;
+    height: 50px;
+    right: 40px;
     background-color: rgba(255, 255, 255, 0);
-
+    display: flex;
+    margin-top: 50px;
 }
 
-.connectBar {
-    padding: 10px 30px 10px 10px;
-    max-height: 69px;
+.tabBar {
+    background-color: rgba(247,247,247, 0.87);
+    width: 260px;
+    padding: 5px 5px;
+    max-height: 70px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 0px 25px rgba(195, 208, 222, 0.5);
 }
 
-.connectBar .tab1 img {
+.tab {
+    text-align: center;
+}
+
+.tabBar div.active {
+    background-color: white;
+    border-radius: 100px;
+    padding: 0 15px 0 10px;
+}
+
+.active p {
+    float: right;
+    font-size: 1em;
+    font-weight: 400;
+    color: #6A67F6;
+    margin: 10px 0 auto 10px;
+}
+
+.active img {
     margin-top: 3px;
+    filter: invert(37%) sepia(70%) saturate(2530%) hue-rotate(226deg) brightness(101%) contrast(93%);
 }
 
-.connectBar .tab2 img,
-.connectBar .tab3 img {
-    border-radius: 50%;
-    border: 0px solid white;
-    transition: .25s;
+.tabBar img {
+   width: 25px;
+   margin-top: 7px;
 }
 
-.connectBar .tab2 img:hover,
-.connectBar .tab3 img:hover {
-    border: 10px solid white;
-    filter: brightness(2) saturate(2) hue-rotate(20deg);
-    transition: .25s;
+.tabBar img:hover {
+    filter: brightness(2) saturate(5) hue-rotate(20deg);;
 }
+
+@media only screen and (max-width: 1400px) {
+  #connectPage #sidebar {
+        width: 45%;
+  }
+}
+
+
 

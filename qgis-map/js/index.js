@@ -60,9 +60,9 @@ function buildSidebarLeft(gemeente) {
 	document.querySelector('aside:nth-of-type(2)').style.right = '0px';
 	initiativeSidebar.style.left = '0';
 
-	if (window.innerHeight < 800) {
+	// if (window.innerHeight < 800) {
 		document.getElementById('legenda').style.left = '240px';
-	} 
+	// } 
 
 	//places the gemeente svg/path on point 0,0
 	if (yCoordinate < 0) {
@@ -211,9 +211,9 @@ function moveSidebar() {
 	buttonContainer.style.left = '0';
 	yearContainer.style.left = '0';
 
-	if (window.innerHeight < 800) {
+	// if (window.innerHeight < 800) {
 		document.getElementById('legenda').style.left = '0';
-	}
+	// }
 };
 
 function changeYear(jaarItem) {
@@ -250,7 +250,6 @@ function switchEnergy() {
 	const legendaTitle = document.querySelector("#legenda > p");
 	const legendaNumbers = document.querySelectorAll(".color-container > div p");
 
-	console.log(propertyValue)
 	if (propertyValue === "groenPercentage/") {
 		legendaTitle.innerText = "Green energy percentage";
 		legendaColor[1].style.backgroundColor = "#baf0c7";
