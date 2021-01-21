@@ -623,7 +623,7 @@ aside:nth-of-type(2) > p span  {
 
 .active p {
     float: right;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 400;
     color: #6A67F6;
     margin: 10px 0 auto 10px;
@@ -676,6 +676,13 @@ aside:nth-of-type(2) > p span  {
 @media screen and (min-height: 800px) {
 	#tabMenu {
     	right: calc(50vw - 80px);
+		z-index: 1100;
+	    position: absolute;
+	    bottom: 40px;
+	    height: 50px;
+	    background-color: rgba(255, 255, 255, 0);
+	    display: flex;
+	    margin-top: 50px;
 	}
 
 	#legenda {
