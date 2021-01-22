@@ -66,18 +66,6 @@ function mergeAPIData(dataset) {
 			return newObject;
 		};
 	})
-	// .filter(entry => entry.provincie !== "Friesland")
-	// .filter(entry => entry.provincie !== "Gelderland")
-	// .filter(entry => entry.provincie !== "Utrecht")
-	// .filter(entry => entry.provincie !== "Noord-Holland")
-	// .filter(entry => entry.provincie !== "Zuid-Holland")
-	// .filter(entry => entry.provincie !== "Groningen")
-	// .filter(entry => entry.provincie !== "Drenthe")
-	// .filter(entry => entry.provincie !== "Overijssel")
-	// .filter(entry => entry.provincie !== "Flevoland")
-	// .filter(entry => entry.provincie !== "Noord-Brabant")
-	// .filter(entry => entry.provincie !== "Limburg")
-	// .filter(entry => entry.provincie !== "Zeeland")
 };
 
 function mergeEnergieData(dataset) {
