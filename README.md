@@ -1,4 +1,5 @@
 <img width="1440" alt="Screenshot 2021-01-22 at 11 25 22" src="https://user-images.githubusercontent.com/59770136/105479306-96d70d00-5ca4-11eb-969c-536969b51429.png">
+https://roelandvs.github.io/empower/qgis-map
 
 # EMPOWER 2.0
 The focus of the application is helping prosumers in their effort to make a green energy community. Our goal is to to create inspirational examples of features for the digital platform EMPOWER 2.0 by exploring visualization possibilities using data from Dutch open sources and combining three different types of information: the number of initiatives in a place and its characteristics, the renewable energy production of different areas in the Netherlands and, mainly, the capacity of production of each area.
@@ -34,7 +35,7 @@ git clone https://github.com/roelandvs/frontend-data.git
 - Data provided by Empower 2.0
 
 ## Example data of municipality
-```js
+```
 {
 aantalBedrijfvestg: 1425,
 aantalWoningen: 8147,
@@ -74,3 +75,7 @@ windStroomTj:  {
 },
 }
 ```
+
+## Creators of prototype
+- Roeland van Stee (Main page with municipality information)
+- Teunis Marseille (Connect and Profile page)
