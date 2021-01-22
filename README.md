@@ -36,39 +36,36 @@ git clone https://github.com/roelandvs/frontend-data.git
 ## Example data of municipality
 ```js
 {
-aantalBedrijfvestg: 1425
-aantalWoningen: 8147
-bevolkingsDichtheid: 224
+aantalBedrijfvestg: 1425,
+aantalWoningen: 8147,
+bevolkingsDichtheid: 224,
 biogasStroomTj: {
   2015: 1.2,
   2016: 2,
   2017: 2.1,
   2018: 1.8,
 },
-__proto__: Object
-gemAardgasVerbruikM3: 1530
-gemElekVerbuikKwh: 2570
-gemeenteCode: "GM1891"
-gemeenteNaam: "Dantumadiel"
+gemAardgasVerbruikM3: 1530,
+gemElekVerbuikKwh: 2570,
+gemeenteCode: "GM1891",
+gemeenteNaam: "Dantumadiel",
 groenPercentage: {
   2015: 6.2,
   2016: 6.1,
   2017: 6.6,
   2018: 7.5,
 },
-__proto__: Object
-huisHoudens: 7756
-inwoners: 18923
-oppervlakteHa: 8753
-percentageBewoond: 97
+huisHoudens: 7756,
+inwoners: 18923,
+oppervlakteHa: 8753,
+percentageBewoond: 97,
 totaalEnergieGebruik: {
   2015: 1138,
   2016: 1116,
   2017: 1082,
   2018: 1106,
 },
-__proto__: Object
-totaalPersonenAuto: 9915
+totaalPersonenAuto: 9915,
 windStroomTj:  {
   2015: 1,
   2016: 1,
